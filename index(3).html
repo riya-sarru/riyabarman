@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riya Barman | Digital Marketing Executive</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+body{
+margin:0;
+font-family:Inter,sans-serif;
+background:#f7f8fc;
+color:#171923;
+scroll-behavior:smooth;
+}
+*{box-sizing:border-box}
+nav{
+position:sticky;
+top:0;
+background:#fff;
+display:flex;
+justify-content:space-between;
+padding:18px 8%;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+z-index:100;
+}
+nav a{
+text-decoration:none;
+color:#444;
+margin-left:20px;
+font-weight:600;
+}
+nav a:hover{color:#6C63FF}
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:80px 8%;
+gap:50px;
+}
+.hero img{
+width:340px;
+height:340px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+animation:float 5s ease-in-out infinite;
+}
+@keyframes float{
+50%{transform:translateY(-15px);}
+}
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#6C63FF;
+color:white;
+text-decoration:none;
+border-radius:40px;
+margin-top:20px;
+font-weight:700;
+}
+section{
+padding:80px 8%;
+scroll-margin-top:80px;
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+footer{
+padding:30px;
+text-align:center;
+background:#171923;
+color:white;
+}
+@media(max-width:900px){
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+.hero img{
+margin:auto;
+width:250px;
+height:250px;
+}
+nav{
+flex-direction:column;
+gap:15px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Riya.</h2>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Hi, I'm <span style="color:#6C63FF;">Riya Barman</span></h1>
+<h3>Digital Marketing Executive</h3>
+<p>I help businesses grow using Digital Marketing, Local SEO, Social Media Management and Website Management.</p>
+
+<a class="btn" href="resume.pdf" download>Download Resume</a>
+</div>
+
+<div style="text-align:center;">
+<img src="images/profile.png" alt="Profile">
+</div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<p>I'm a BBA Digital Marketing graduate from Chitkara University with 6 months of internship experience in Digital Marketing, SEO, Social Media Management, Google Business Profile Optimization and Website Management.</p>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="cards">
+<div class="card">SEO & Local SEO</div>
+<div class="card">Social Media Marketing</div>
+<div class="card">WordPress & Wix</div>
+<div class="card">Google Analytics</div>
+<div class="card">Google Business Profile</div>
+<div class="card">Content Marketing</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="cards">
+<div class="card">SEO Blog Optimization</div>
+<div class="card">Instagram Growth Strategy</div>
+<div class="card">Google Business Profile Optimization</div>
+<div class="card">Exclusive Gifts Brand</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<p><i class="fa-solid fa-envelope"></i> riyabarman1017@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> +91 81689-28497</p>
+
+<form onsubmit="event.preventDefault();alert('Connect this form to Formspree or EmailJS to receive messages.')">
+<input style="width:100%;padding:12px;margin:10px 0;" placeholder="Your Name" required>
+<input type="email" style="width:100%;padding:12px;margin:10px 0;" placeholder="Email" required>
+<textarea style="width:100%;padding:12px;height:120px;margin:10px 0;" placeholder="Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+</section>
+
+<footer>
+© 2026 Riya Barman. All Rights Reserved.
+</footer>
+
+</body>
+</html>
