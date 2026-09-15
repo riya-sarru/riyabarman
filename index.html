@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riya Barman | Digital Marketing Executive</title>
+<meta name="description" content="Riya Barman — Digital Marketing Executive | Social Media, Local SEO, Website Management">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F8FC;
+    --card:#FFFFFF;
+    --border:#E8E9F3;
+    --ink:#171923;
+    --muted:#6B7280;
+    --indigo:#6C63FF;
+    --indigo-deep:#5A4FE0;
+    --indigo-pale:#EDEBFF;
+    --sky:#4C8DFF;
+    --sky-pale:#E8F1FF;
+    --black-btn:#171923;
+    --green:#22C55E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;
+  }
+  a{text-decoration:none;color:inherit;}
+  html{scroll-behavior:smooth;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .topbar{height:4px;background:linear-gradient(90deg,var(--indigo),var(--sky));}
+
+  nav{position:sticky;top:16px;z-index:50;padding:0 24px;}
+  .nav-inner{
+    max-width:1180px;margin:0 auto;background:var(--card);border:1px solid var(--border);
+    border-radius:999px;box-shadow:0 4px 20px rgba(23,23,35,0.05);
+    display:flex;align-items:center;justify-content:space-between;padding:10px 18px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;}
+  .brand-avatar{
+    width:34px;height:34px;border-radius:50%;background:var(--indigo);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;
+  }
+  .navlinks{display:flex;align-items:center;gap:6px;}
+  .navlinks a{
+    padding:9px 18px;border-radius:999px;font-size:0.92rem;font-weight:500;color:var(--muted);
+    transition:all 0.2s ease;
+  }
+  .navlinks a:hover{color:var(--ink);}
+  .navlinks a.active{background:var(--indigo);color:#fff;}
+  .theme-toggle{
+    width:36px;height:36px;border-radius:50%;border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;color:var(--muted);
+  }
+  @media(max-width:900px){.navlinks{display:none;}}
+
+  .hero{padding:90px 0 60px;position:relative;}
+  .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .pill-tag{
+    display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);
+    padding:9px 18px;border-radius:999px;font-size:0.85rem;color:var(--muted);font-weight:500;margin-bottom:28px;
+  }
+  .pill-tag .dot{color:var(--indigo);}
+  .greet{color:var(--muted);font-size:1.1rem;margin-bottom:6px;}
+  h1.name{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;line-height:1.05;letter-spacing:-0.02em;}
+  h1.name .accent{color:var(--indigo);}
+  .role-pills{display:flex;gap:10px;margin:22px 0;flex-wrap:wrap;}
+  .role-pill{padding:8px 18px;border-radius:999px;font-size:0.86rem;font-weight:600;}
+  .role-pill.a{background:var(--indigo-pale);color:var(--indigo-deep);}
+  .role-pill.b{background:var(--sky-pale);color:var(--sky);}
+  .hero-desc{color:var(--muted);font-size:1.05rem;max-width:560px;margin-bottom:32px;}
+  .hero-desc b{color:var(--ink);font-weight:700;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;}
+  .btn{
+    padding:15px 26px;border-radius:999px;font-weight:600;font-size:0.94rem;border:1px solid transparent;
+    display:inline-flex;align-items:center;gap:8px;cursor:pointer;transition:all 0.2s ease;
+  }
+  .btn-primary{background:var(--indigo);color:#fff;}
+  .btn-primary:hover{background:var(--indigo-deep);}
+  .btn-dark{background:var(--black-btn);color:#fff;}
+  .btn-dark:hover{opacity:0.85;}
+  .btn-outline{border-color:var(--border);color:var(--ink);background:var(--card);}
+  .btn-outline:hover{border-color:var(--indigo);color:var(--indigo);}
+  .stats-row{display:flex;gap:48px;flex-wrap:wrap;}
+  .stat b{font-size:1.7rem;font-weight:800;display:block;}
+  .stat span{color:var(--muted);font-size:0.85rem;}
+
+  .hero-visual{position:relative;height:480px;display:flex;align-items:center;justify-content:center;}
+  .orb{
+    width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#C9C3FF,#8FA8FF 60%,#7B8FF0);
+    border:1px solid #fff;box-shadow:0 30px 60px rgba(108,99,255,0.25);
+    overflow:hidden;
+  }
+  .orb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .float-chip{
+    position:absolute;background:var(--card);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(23,23,35,0.08);
+  }
+  .float-chip.wp{width:56px;height:56px;top:8%;left:0;color:#21759B;font-size:1.4rem;}
+  .float-chip.yt{width:56px;height:56px;top:15%;right:4%;background:#FF0000;color:#fff;font-size:1.3rem;}
+  .float-chip.gg{width:52px;height:52px;bottom:22%;right:0;font-weight:700;color:#4285F4;font-size:1.4rem;}
+  .float-chip.meta{width:50px;height:50px;bottom:4%;right:10%;color:#0866FF;font-size:1.3rem;}
+  .float-badge{
+    position:absolute;background:var(--card);border-radius:16px;padding:12px 18px;
+    box-shadow:0 8px 24px rgba(23,23,35,0.08);font-size:0.88rem;font-weight:600;
+    display:flex;align-items:center;gap:10px;
+  }
+  .float-badge.job{top:18%;right:-4%;}
+  .float-badge.job::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);}
+  .float-badge.avail{bottom:12%;left:-4%;display:flex;flex-direction:column;align-items:flex-start;gap:2px;}
+  .float-badge.avail span.top{color:var(--muted);font-weight:400;font-size:0.78rem;}
+  .avail-icon{width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.9rem;}
+  @media(max-width:900px){.hero-visual{height:340px;}.orb{width:220px;height:220px;}.float-chip,.float-badge{transform:scale(0.85);}}
+
+  section{padding:90px 0;}
+  .eyebrow{font-size:0.82rem;font-weight:700;letter-spacing:0.08em;color:var(--indigo);text-transform:uppercase;margin-bottom:14px;}
+  h2.sec-title{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.01em;margin-bottom:50px;}
+  h2.sec-title .accent{color:var(--indigo);}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-grid p{color:var(--muted);font-size:1.02rem;margin-bottom:18px;}
+  .about-grid b{color:var(--ink);}
+  .about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .hi-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;}
+  .hi-card .ic{width:40px;height:40px;border-radius:12px;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:1.1rem;}
+  .hi-card h4{font-size:0.98rem;font-weight:700;margin-bottom:4px;}
+  .hi-card p{color:var(--muted);font-size:0.85rem;margin:0;}
+
+  .exp-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+  @media(max-width:900px){.exp-cols{grid-template-columns:1fr;}}
+  .col-head{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;margin-bottom:20px;}
+  .col-head .ic{color:var(--indigo);font-size:1.3rem;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;}
+  .card + .card{margin-top:20px;}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;}
+  .card-date{color:var(--muted);font-size:0.85rem;display:flex;align-items:center;gap:6px;margin-bottom:10px;}
+  .card h3{font-size:1.2rem;font-weight:700;margin-bottom:4px;}
+  .card .org{color:var(--muted);font-size:0.92rem;margin-bottom:14px;}
+  .status-pill{background:var(--indigo-pale);color:var(--indigo-deep);font-size:0.78rem;font-weight:600;padding:6px 14px;border-radius:999px;white-space:nowrap;}
+  .check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:14px;}
+  .check-item{display:flex;align-items:center;gap:10px;font-size:0.92rem;color:var(--ink);}
+  .check-icon{width:24px;height:24px;border-radius:50%;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;font-size:0.72rem;flex-shrink:0;}
+  @media(max-width:640px){.check-grid{grid-template-columns:1fr;}}
+
+  .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:860px){.skill-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.skill-grid{grid-template-columns:1fr;}}
+  .skill-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;}
+  .skill-card .ic{width:42px;height:42px;border-radius:12px;background:var(--sky-pale);color:var(--sky);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:16px;}
+  .skill-card h4{font-weight:700;font-size:1.02rem;margin-bottom:12px;}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .skill-tag{background:var(--bg);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:5px 12px;border-radius:999px;}
+
+  .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:760px){.tools-grid{grid-template-columns:repeat(2,1fr);}}
+  .tool-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;text-align:center;}
+  .tool-card .ic{width:44px;height:44px;border-radius:50%;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin:0 auto 12px;}
+  .tool-card h4{font-size:0.92rem;font-weight:700;}
+
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media(max-width:760px){.proj-grid{grid-template-columns:1fr;}}
+  .proj-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;transition:transform 0.2s ease,box-shadow 0.2s ease;}
+  .proj-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(23,23,35,0.08);}
+  .proj-tag{display:inline-block;background:var(--sky-pale);color:var(--sky);font-size:0.75rem;font-weight:700;padding:5px 12px;border-radius:999px;margin-bottom:14px;}
+  .proj-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px;}
+  .proj-card p{color:var(--muted);font-size:0.92rem;}
+
+  #contact{background:var(--bg);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:34px;}
+  .reach-label{color:var(--muted);font-size:0.9rem;margin-bottom:4px;}
+  .reach-name{font-size:1.4rem;font-weight:800;margin-bottom:22px;}
+  .contact-row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);}
+  .contact-row:last-of-type{border-bottom:none;}
+  .contact-row .ic{width:40px;height:40px;border-radius:12px;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-row .lbl{color:var(--muted);font-size:0.8rem;}
+  .contact-row .val{font-weight:600;font-size:0.96rem;}
+  .looking-for{margin-top:22px;padding-top:20px;border-top:1px solid var(--border);}
+  .looking-for .lbl{font-size:0.78rem;font-weight:700;letter-spacing:0.06em;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:560px){.form-grid{grid-template-columns:1fr;}}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{font-size:0.75rem;font-weight:700;letter-spacing:0.05em;color:var(--muted);text-transform:uppercase;}
+  .field input,.field textarea{
+    background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:14px 16px;
+    font-family:'Inter',sans-serif;font-size:0.94rem;color:var(--ink);
+  }
+  .field textarea{resize:vertical;min-height:110px;}
+  .field.full{grid-column:1/-1;}
+  .form-submit{margin-top:6px;}
+
+  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:0.85rem;border-top:1px solid var(--border);}
+
+  #quiz{padding:70px 0 90px;}
+  .quiz-intro{color:var(--muted);font-size:1.02rem;max-width:560px;margin-bottom:36px;}
+  .quiz-score-bar{
+    display:flex;align-items:center;justify-content:space-between;background:var(--card);
+    border:1px solid var(--border);border-radius:16px;padding:16px 22px;margin-bottom:24px;
+  }
+  .quiz-score-bar .label{font-size:0.9rem;color:var(--muted);}
+  .quiz-score-bar .score{font-weight:800;color:var(--indigo-deep);font-size:1.1rem;}
+  .quiz-reset{background:none;border:1px solid var(--border);border-radius:999px;padding:7px 16px;font-size:0.82rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;}
+  .quiz-reset:hover{border-color:var(--indigo);color:var(--indigo);}
+  .quiz-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:26px;margin-bottom:18px;}
+  .quiz-q{font-weight:700;font-size:1.02rem;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start;}
+  .quiz-qnum{width:28px;height:28px;border-radius:50%;background:var(--indigo-pale);color:var(--indigo-deep);display:flex;align-items:center;justify-content:center;font-size:0.82rem;flex-shrink:0;font-weight:800;}
+  .quiz-options{display:grid;gap:10px;margin-left:40px;}
+  @media(max-width:560px){.quiz-options{margin-left:0;}}
+  .quiz-opt{text-align:left;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:12px 16px;font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--ink);cursor:pointer;transition:all 0.15s ease;}
+  .quiz-opt:hover:not([disabled]){border-color:var(--indigo);}
+  .quiz-opt.correct{background:#E8FBF0;border-color:var(--green);color:#15803D;font-weight:700;}
+  .quiz-opt.wrong{background:#FDECEC;border-color:#EF4444;color:#B91C1C;font-weight:700;}
+  .quiz-opt[disabled]{cursor:default;}
+  .quiz-explain{margin-left:40px;margin-top:12px;font-size:0.86rem;line-height:1.55;color:var(--ink);background:var(--indigo-pale);padding:13px 16px;border-radius:12px;display:none;}
+  @media(max-width:560px){.quiz-explain{margin-left:0;}}
+  .quiz-explain.show{display:block;}
+  .quiz-explain b{color:var(--indigo-deep);}
+</style>
+</head>
+<body>
+
+<div class="topbar"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand"><div class="brand-avatar">R</div>Riya.</div>
+    <div class="navlinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#tools">Tools</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="theme-toggle">☾</div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill-tag"><span class="dot">✦</span> Open to opportunities in Mohali · Chandigarh · Panchkula</div>
+      <div class="greet">Hi, I'm</div>
+      <h1 class="name">Riya <span class="accent">Barman</span></h1>
+      <div class="role-pills">
+        <span class="role-pill a">Digital Marketing Executive</span>
+        <span class="role-pill b">Social Media Executive</span>
+      </div>
+      <p class="hero-desc">I help businesses grow through <b>Digital Marketing</b>, <b>Social Media Management</b>, <b>Local SEO</b>, <b>Website Management</b>, and <b>Data-Driven Marketing Strategies</b>.</p>
+      <div class="hero-cta">
+        <a href="resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
+        <a href="#contact" class="btn btn-dark">Hire Me →</a>
+        <a href="#projects" class="btn btn-outline">View Portfolio</a>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><b>1Y</b><span>Digital Marketing Experience</span></div>
+        <div class="stat"><b>BBA</b><span>Digital Marketing</span></div>
+        <div class="stat"><b>15+</b><span>Marketing Tools</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb"><img src="images/profile.png" alt="Riya Barman"></div>
+      <div class="float-chip wp">W</div>
+      <div class="float-chip yt">▶</div>
+      <div class="float-chip gg">G</div>
+      <div class="float-chip meta">∞</div>
+      <div class="float-badge job">Actively job hunting</div>
+      <div class="float-badge avail">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="avail-icon">▲</div>
+          <div><span class="top">Available for</span><br>Full-time roles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2 class="sec-title">Get to know <span class="accent">me</span></h2>
+    <div class="about-grid">
+      <div>
+        <p>I'm a <b>Digital Marketing & SEO Executive</b> with 1 year of hands-on experience in SEO, social media management, content, and website management.</p>
+        <p>I have managed multiple client accounts and digital platforms, working across SEO strategies, keyword research, Google Business Profile optimization, social media management, content publishing, and website management.</p>
+        <p>My experience includes handling day-to-day digital marketing activities, monitoring performance, and implementing strategies focused on improving online visibility, organic growth, and overall digital presence.</p>
+        <p>I also run <b>Exclusive Gifts</b>, an affiliate-based gifting brand, and take on freelance design projects using Canva.</p>
+      </div>
+      <div class="about-highlights">
+        <div class="hi-card"><div class="ic">🎯</div><h4>Local SEO</h4><p>Google Business Profile & keyword research</p></div>
+        <div class="hi-card"><div class="ic">📱</div><h4>Social Media</h4><p>Content strategy & growth management</p></div>
+        <div class="hi-card"><div class="ic">🌐</div><h4>Website Mgmt</h4><p>WordPress & Wix management</p></div>
+        <div class="hi-card"><div class="ic">📊</div><h4>Analytics</h4><p>Performance reporting & Google Analytics</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="wrap">
+    <div class="eyebrow">Quick Knowledge Check</div>
+    <h2 class="sec-title">Test my <span class="accent">SEO knowledge</span></h2>
+    <p class="quiz-intro">Not just a resume line — here's SEO applied. A fresh set of 6 questions every time you load this page — click an answer and see if you'd hire me.</p>
+
+    <div class="quiz-score-bar">
+      <div><span class="label">Your score: </span><span class="score" id="quizScore">0 / 6</span></div>
+      <button class="quiz-reset" onclick="renderQuiz()">↺ New Set of Questions</button>
+    </div>
+
+    <div id="quizContainer"></div>
+  </div>
+</section>
+
+<script>
+  const QUIZ_BANK = [
+    { q:"What does SEO stand for?", correct:"Search Engine Optimization", wrong:["Site Engagement Overview","Social Engine Outreach","Search Experience Output"], explain:"SEO is the practice of improving a website's visibility in unpaid, organic search results." },
+    { q:"Which of these is an on-page SEO factor?", correct:"Meta titles & descriptions", wrong:["Backlinks from other websites","Social media shares","Domain age"], explain:"On-page SEO covers everything you control directly on your site — titles, meta tags, content, internal links. Backlinks and shares are off-page signals." },
+    { q:"What's the main purpose of keyword research?", correct:"To find what your audience is actually searching for", wrong:["To copy competitor content","To increase page word count","To pick website colors"], explain:"Keyword research reveals real search demand and intent, so content actually matches what people are looking for — not just guesses." },
+    { q:"For Google Business Profile, what most improves local ranking?", correct:"Consistent NAP (Name, Address, Phone) + active reviews", wrong:["Instagram follower count","Website page speed alone","Number of blog posts"], explain:"Local ranking depends on proximity, relevance, and prominence — accurate NAP details and regularly earned reviews build that prominence." },
+    { q:"What's a backlink?", correct:"A link from another website pointing back to yours", wrong:["A link from your site to another site","A broken link on a page","An internal navigation link"], explain:"Backlinks act as \"votes of trust\" from other sites and are a key off-page SEO ranking signal." },
+    { q:"Which metric best shows a blog is actually working for SEO?", correct:"Organic traffic & keyword rankings over time", wrong:["Total word count","Font size used","Number of images"], explain:"Real SEO success shows up as growth in organic traffic and keyword rankings — not vanity stats like word count." },
+    { q:"What does 'alt text' on an image help with?", correct:"Describing the image for search engines & accessibility", wrong:["Making the image load faster","Changing the image's file size","Adding a watermark"], explain:"Alt text tells search engines (and screen readers) what an image shows, helping SEO and accessibility together." },
+    { q:"What is a meta description mainly used for?", correct:"A short summary shown in search results to improve click-through rate", wrong:["Ranking a page higher automatically", "Storing keywords invisibly", "Blocking search engines from a page"], explain:"A meta description doesn't directly boost rankings, but a compelling one improves CTR from the search results page." },
+    { q:"What's the difference between organic and paid search results?", correct:"Organic results are earned through relevance; paid results are ads you pay for", wrong:["Organic results only show images", "Paid results rank higher forever", "There is no difference"], explain:"Organic rankings come from SEO relevance and authority, while paid results appear because of ad spend." },
+    { q:"What is a sitemap used for?", correct:"Helping search engines discover and crawl all pages on a site", wrong:["Designing the website's layout", "Tracking website visitors", "Storing customer reviews"], explain:"A sitemap (usually sitemap.xml) lists a site's URLs so search engines can find and index pages efficiently." },
+    { q:"What does 'mobile-first indexing' mean for Google?", correct:"Google mainly uses the mobile version of a site to rank pages", wrong:["Only mobile users can find the site", "Desktop sites are ranked first", "It only applies to mobile apps"], explain:"Since most searches happen on mobile, Google predominantly crawls and ranks using the mobile version of your content." },
+    { q:"Why does page load speed matter for SEO?", correct:"It affects user experience and is a ranking factor", wrong:["It only affects image quality", "It has no impact on rankings", "It only matters for e-commerce sites"], explain:"Slow pages hurt user experience and conversions, and speed is a confirmed Google ranking signal." },
+    { q:"What is anchor text?", correct:"The clickable, visible text of a hyperlink", wrong:["The title of a webpage", "A page's URL structure", "Text hidden from users"], explain:"Anchor text is the visible, clickable words in a link — its relevance helps search engines understand what the linked page is about." },
+    { q:"What's the point of competitor analysis in SEO/social media?", correct:"To find content gaps and opportunities you can capture", wrong:["To copy their content exactly", "To report them to Google", "It has no real use"], explain:"Competitor analysis reveals what's working for others and where gaps exist — opportunities you can target with better content." },
+    { q:"What is 'bounce rate' a sign of?", correct:"How many visitors leave after viewing just one page", wrong:["How fast a website loads", "Number of backlinks a page has", "How many ads are on a page"], explain:"A high bounce rate can signal that content, relevance, or user experience isn't matching what visitors expected." },
+    { q:"What's the main goal of a WhatsApp/email marketing campaign?", correct:"Direct, personalized engagement with an existing audience", wrong:["Improving a website's backlink profile", "Ranking higher on Google", "Replacing social media entirely"], explain:"Unlike SEO/social reach, campaigns like WhatsApp or email speak directly and personally to people who already know the brand." },
+    { q:"What does CTR (Click-Through Rate) measure?", correct:"The percentage of people who click a link after seeing it", wrong:["How long a video is watched", "The number of followers gained", "Website loading speed"], explain:"CTR = clicks ÷ impressions — a key metric for judging how compelling a title, ad, or thumbnail is." },
+    { q:"Why is internal linking important for a website?", correct:"It helps distribute page authority and helps users/search engines navigate", wrong:["It's only for design purposes", "It slows down the website on purpose", "It has no SEO value"], explain:"Internal links pass authority between pages and help both users and search engines discover related content." }
+  ];
+
+  let quizCorrectCount = 0;
+  let quizTotal = 6;
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for(let i = a.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function renderQuiz(){
+    quizCorrectCount = 0;
+    document.getElementById('quizScore').textContent = '0 / ' + quizTotal;
+    const picks = shuffle(QUIZ_BANK).slice(0, quizTotal);
+    const container = document.getElementById('quizContainer');
+    container.innerHTML = '';
+    picks.forEach((item, i) => {
+      const options = shuffle([item.correct, ...item.wrong]);
+      const card = document.createElement('div');
+      card.className = 'quiz-card';
+      const optsHtml = options.map(opt =>
+        `<button class="quiz-opt" data-correct="${opt === item.correct ? 'true' : 'false'}" onclick="quizAnswer(this)">${opt}</button>`
+      ).join('');
+      card.innerHTML = `
+        <div class="quiz-q"><span class="quiz-qnum">${i + 1}</span>${item.q}</div>
+        <div class="quiz-options">${optsHtml}</div>
+        <div class="quiz-explain"><b>Why:</b> ${item.explain}</div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function quizAnswer(el){
+    const options = el.parentElement.querySelectorAll('.quiz-opt');
+    options.forEach(o => o.disabled = true);
+    const isCorrect = el.dataset.correct === "true";
+    if(isCorrect){
+      el.classList.add('correct');
+      quizCorrectCount++;
+    } else {
+      el.classList.add('wrong');
+      options.forEach(o => { if(o.dataset.correct === "true") o.classList.add('correct'); });
+    }
+    const explain = el.closest('.quiz-card').querySelector('.quiz-explain');
+    if(explain) explain.classList.add('show');
+    document.getElementById('quizScore').textContent = quizCorrectCount + ' / ' + quizTotal;
+  }
+
+  renderQuiz();
+</script>
+
+
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">Journey</div>
+    <h2 class="sec-title">Education & <span class="accent">Experience</span></h2>
+    <div class="exp-cols">
+      <div>
+        <div class="col-head"><span class="ic">🎓</span> Education</div>
+        <div class="card">
+          <div class="card-date">📅 Graduated</div>
+          <h3>BBA in Digital Marketing</h3>
+          <div class="org">Chitkara University · Rajpura, Punjab</div>
+          <p style="color:var(--muted);font-size:0.92rem;">Specialised curriculum spanning digital branding, campaign strategy, SEO, analytics, consumer behaviour and marketing management.</p>
+        </div>
+      </div>
+      <div>
+        <div class="col-head"><span class="ic">💼</span> Experience</div>
+        <div class="card">
+          <div class="card-top">
+            <div>
+              <h3>Digital Marketing Executive</h3>
+              <div class="org">Healthy Jeena Sikho</div>
+            </div>
+            <span class="status-pill">1 Year</span>
+          </div>
+          <div class="check-grid">
+            <div class="check-item"><span class="check-icon">✓</span>Social Media Management</div>
+            <div class="check-item"><span class="check-icon">✓</span>Google Business Profile Optimization</div>
+            <div class="check-item"><span class="check-icon">✓</span>Local SEO</div>
+            <div class="check-item"><span class="check-icon">✓</span>Website Management (WordPress & Wix)</div>
+            <div class="check-item"><span class="check-icon">✓</span>Content Planning</div>
+            <div class="check-item"><span class="check-icon">✓</span>Keyword Research</div>
+            <div class="check-item"><span class="check-icon">✓</span>Competitor Analysis</div>
+            <div class="check-item"><span class="check-icon">✓</span>Google Analytics</div>
+            <div class="check-item"><span class="check-icon">✓</span>Performance Reporting</div>
+            <div class="check-item"><span class="check-icon">✓</span>YouTube Studio Management</div>
+            <div class="check-item"><span class="check-icon">✓</span>Content Optimization</div>
+            <div class="check-item"><span class="check-icon">✓</span>Digital Branding</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <h2 class="sec-title">What I bring to the <span class="accent">table</span></h2>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <div class="ic">🔍</div>
+        <h4>Search & SEO</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Local SEO</span>
+          <span class="skill-tag">Keyword Research</span>
+          <span class="skill-tag">Google Search Console</span>
+          <span class="skill-tag">JSON-LD Schema</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="ic">📣</div>
+        <h4>Social & Content</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Social Media Marketing</span>
+          <span class="skill-tag">Blog Writing</span>
+          <span class="skill-tag">WhatsApp Campaigns</span>
+          <span class="skill-tag">YouTube Content</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="ic">📈</div>
+        <h4>Analytics & Growth</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Google Analytics</span>
+          <span class="skill-tag">Performance Reporting</span>
+          <span class="skill-tag">Competitor Analysis</span>
+          <span class="skill-tag">Affiliate Marketing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="eyebrow">Tools</div>
+    <h2 class="sec-title">Software I <span class="accent">use</span></h2>
+    <div class="tools-grid">
+      <div class="tool-card"><div class="ic">W</div><h4>WordPress</h4></div>
+      <div class="tool-card"><div class="ic">Wx</div><h4>Wix</h4></div>
+      <div class="tool-card"><div class="ic">G</div><h4>Google Analytics</h4></div>
+      <div class="tool-card"><div class="ic">▶</div><h4>YouTube Studio</h4></div>
+      <div class="tool-card"><div class="ic">C</div><h4>Canva</h4></div>
+      <div class="tool-card"><div class="ic">✂</div><h4>CapCut / VN</h4></div>
+      <div class="tool-card"><div class="ic">GB</div><h4>Google Business Profile</h4></div>
+      <div class="tool-card"><div class="ic">AI</div><h4>ChatGPT / Claude</h4></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h2 class="sec-title">Selected <span class="accent">work</span></h2>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <span class="proj-tag">SEO</span>
+        <h3>Category Blog Rewrites</h3>
+        <p>Full audits and SEO-optimized rewrites across wheelchair, oxygen concentrator, CPAP, and SpO2 blog categories, with JSON-LD schema markup.</p>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">Social Media</span>
+        <h3>Instagram Growth Strategy</h3>
+        <p>Bio, content strategy, and highlight architecture rebuilt for a medical equipment brand, alongside 40+ produced short-form reels.</p>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">Local SEO</span>
+        <h3>Google Business Profile</h3>
+        <p>Optimized listings and managed WhatsApp campaign cycles to improve local discovery and response rates.</p>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">Brand</span>
+        <h3>Exclusive Gifts</h3>
+        <p>Founded and ran an affiliate-based gifting brand, handling design, product curation, and freelance client work via Canva.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2 class="sec-title">Let's build your next <span class="accent">growth story</span> together.</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="reach-label">Reach out to</div>
+        <div class="reach-name">Riya Barman</div>
+        <div class="contact-row">
+          <div class="ic">✉</div>
+          <div><div class="lbl">Email</div><div class="val">riyabarman1017@gmail.com</div></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic">☎</div>
+          <div><div class="lbl">Phone</div><div class="val">+91 81689-28497</div></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic">in</div>
+          <div><div class="lbl">LinkedIn</div><div class="val">linkedin.com/in/riya-barman-artist</div></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic">📍</div>
+          <div><div class="lbl">Location</div><div class="val">Ambala, Haryana · Open to Mohali, Chandigarh, Panchkula</div></div>
+        </div>
+        <div class="looking-for">
+          <div class="lbl">Looking for</div>
+          <div class="role-pills">
+            <span class="role-pill a">Digital Marketing Executive</span>
+            <span class="role-pill b">Social Media Executive</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <form id="contactForm" class="form-grid" action="https://formspree.io/f/xyeyrajw" method="POST">
+          <div class="field"><label>Your Name *</label><input type="text" name="name" required></div>
+          <div class="field"><label>Email *</label><input type="email" name="email" required></div>
+          <div class="field"><label>Company</label><input type="text" name="company"></div>
+          <div class="field"><label>Role Hiring For</label><input type="text" name="role"></div>
+          <div class="field full"><label>Job Location</label><input type="text" name="job_location" placeholder="Mohali / Chandigarh / Panchkula"></div>
+          <div class="field full"><label>Message *</label><textarea name="message" required placeholder="Tell me about the role or opportunity..."></textarea></div>
+          <input type="hidden" name="_subject" value="New portfolio message — Riya Barman">
+          <div class="field full form-submit"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">Send Message</button></div>
+          <div id="formStatus" class="field full" style="display:none;font-size:0.9rem;font-weight:600;"></div>
+        </form>
+        <script>
+          const contactForm = document.getElementById('contactForm');
+          const formStatus = document.getElementById('formStatus');
+          contactForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            fetch(contactForm.action, {
+              method: 'POST',
+              body: new FormData(contactForm),
+              headers: { 'Accept': 'application/json' }
+            }).then(response => {
+              formStatus.style.display = 'block';
+              if(response.ok){
+                formStatus.style.color = '#15803D';
+                formStatus.textContent = "✓ Message sent — I'll get back to you soon!";
+                contactForm.reset();
+              } else {
+                formStatus.style.color = '#B91C1C';
+                formStatus.textContent = "Something went wrong. Please email me directly instead.";
+              }
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Message';
+            }).catch(() => {
+              formStatus.style.display = 'block';
+              formStatus.style.color = '#B91C1C';
+              formStatus.textContent = "Something went wrong. Please email me directly instead.";
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Message';
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Riya Barman. All rights reserved.</footer>
+
+</body>
+</html>
