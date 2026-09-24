@@ -844,94 +844,6 @@ footer{background:transparent !important;}
 #riyaNextBtn[disabled]{opacity:.5;cursor:not-allowed;}
 
 </style>
-<style>
-
-/* ===== Final scrapbook-style consistency polish ===== */
-/* This layer changes only the visual treatment of the remaining sections.
-   Existing layout, copy, interactions, colours and functionality stay intact. */
-.experience-card,.other-work,.proj-card,.case-card,.skill-zone,.toolbox,.contact-action{position:relative;}
-
-/* Handwritten titles across the sections that previously felt more basic. */
-#experience .experience-card h3,
-#experience .other-work h3,
-#projects .proj-card h3,
-#case-studies .case-card h3,
-#skills .skill-zone h3,
-#tools .tool-item b,
-#contact .contact-action-main b{
-  font-family:"Caveat","Segoe Print",cursive !important;
-  color:var(--navy) !important;
-}
-#experience .experience-card h3,
-#experience .other-work h3,
-#projects .proj-card h3,
-#case-studies .case-card h3{font-size:1.55rem !important;letter-spacing:.01em;}
-#skills .skill-zone h3{font-size:1.45rem !important;}
-#tools .tool-item b{font-size:1.2rem !important;}
-#contact .contact-action-main b{font-size:1.35rem !important;}
-
-/* Little paper-tape details, matching the reference scrapbook cards. */
-#experience .experience-card:before,
-#experience .other-work:before,
-#projects .proj-card:before,
-#case-studies .case-card:before,
-#skills .skill-zone:before,
-#tools .toolbox:before{
-  content:"";position:absolute;top:-9px;left:50%;width:78px;height:19px;
-  transform:translateX(-50%) rotate(-2deg);border-radius:2px;opacity:.82;
-  background:#DCCEFF;pointer-events:none;
-}
-#experience .experience-card:before{background:#CDE9DA;}
-#experience .other-work:before{background:#FFD5B8;}
-#projects .proj-card:nth-child(2):before{background:#C7D9FF;}
-#projects .proj-card:nth-child(3):before{background:#FFE1A9;}
-#projects .proj-card:nth-child(4):before{background:#BFE7D4;}
-#case-studies .case-card:nth-child(2):before{background:#C7D9FF;}
-#case-studies .case-card:nth-child(3):before{background:#FFE1A9;}
-#skills .skill-zone:nth-child(2):before{background:#C7D9FF;}
-#skills .skill-zone:nth-child(3):before{background:#BFE7D4;}
-#tools .toolbox:before{background:#F6D7A5;}
-
-/* Tiny handwritten/doodle marks so each section shares the same visual language. */
-#experience .experience-card:after,
-#experience .other-work:after,
-#projects .proj-card:after,
-#case-studies .case-card:after,
-#skills .skill-zone:after,
-#tools .toolbox:after,
-#contact .wrap:after{
-  position:absolute;font-family:"Caveat",cursive;color:#6F63B5;opacity:.78;pointer-events:none;
-}
-#experience .experience-card:after{content:"♡";right:18px;bottom:12px;font-size:1.4rem;transform:rotate(9deg);}
-#experience .other-work:after{content:"✦";right:18px;top:14px;font-size:1.2rem;transform:rotate(-8deg);}
-#projects .proj-card:after{content:"♡";right:18px;top:12px;font-size:1.25rem;transform:rotate(8deg);}
-#case-studies .case-card:after{content:"✦";right:18px;bottom:12px;font-size:1.15rem;transform:rotate(-8deg);}
-#skills .skill-zone:after{content:"✦";right:17px;top:14px;font-size:1.15rem;transform:rotate(6deg);}
-#tools .toolbox:after{content:"↗";right:20px;bottom:14px;font-size:1.35rem;transform:rotate(-7deg);}
-#contact .wrap:after{content:"Let's connect ♡";right:14px;top:4px;font-size:1.35rem;transform:rotate(-4deg);}
-
-/* A slightly more scrapbook-like feel on the project/case labels, without changing their palette. */
-#projects .proj-tag,
-#case-studies .proj-tag{
-  font-family:"Caveat",cursive !important;
-  font-size:1.02rem !important;
-  letter-spacing:.01em !important;
-  padding:5px 13px !important;
-}
-
-/* Keep all new decorative marks behind the readable content. */
-#experience .experience-card > *,
-#experience .other-work > *,
-#projects .proj-card > *,
-#case-studies .case-card > *,
-#skills .skill-zone > *,
-#tools .toolbox > *,
-#contact .wrap > *{position:relative;z-index:1;}
-
-@media(max-width:760px){
-  #contact .wrap:after{display:none;}
-}
-</style>
 </head>
 <body>
 
@@ -998,3 +910,594 @@ footer{background:transparent !important;}
         </div>
       </div>
     </div>
+  </div>
+</header>
+
+<section id="about" class="cute-section">
+  <div class="wrap">
+    <div class="about-head">
+      <div class="about-title-copy">
+        <div class="eyebrow">✦ Get to Know Me</div>
+        <h2 class="sec-title">Not just a portfolio,<br>but <span class="accent">a little bit of me</span> ♡</h2>
+        <span class="headline-note">Same girl… just with bigger dreams. ♡</span>
+        <p>This isn't your typical “About Me” section. Take a quick quiz, explore a few cards and get to know the real me — my interests, work vibe, and what keeps me going!</p>
+      </div>
+      <div class="about-photo-wrap">
+        <div class="about-photo-frame"><img src="images/profile.png" alt="Riya Barman"></div>
+        <div class="photo-note">Create · Plan · Edit · Repeat ♡<small>That’s how I work.</small></div>
+      </div>
+    </div>
+
+    <div class="about-playground">
+      <div class="about-quiz-box">
+        <div class="about-quiz-layout">
+          <div class="about-quiz-intro">
+            <div class="mini-label">🎀 Mini Quiz</div>
+            <h3>How Well Do You Know Riya?</h3>
+            <p>Answer a few fun questions and see how well you know me. No pressure, just for fun. ☺</p>
+            <button class="btn quiz-start-btn" type="button" onclick="startRiyaQuiz()">Start Quiz →</button>
+            <div class="quiz-arrow-note">Let’s play! ✦</div>
+          </div>
+          <div class="quiz-panel">
+            <div class="quiz-counter" id="riyaQuizCounter">Q1 / 5</div>
+            <p id="riyaQuizQuestion" style="color:var(--navy);font-weight:800;font-size:1.05rem;margin-bottom:14px;">What’s my favourite part of digital marketing?</p>
+            <div id="riyaQuizOptions" class="riya-quiz-options"></div>
+            <div id="riyaQuizFeedback" class="riya-quiz-feedback" aria-live="polite"></div>
+            <button class="btn btn-outline mini-btn" id="riyaNextBtn" type="button" onclick="nextRiyaQuestion()" disabled>Next question →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-box">
+        <div class="mini-label">♡ Pick a Card</div>
+        <h3>Which Side of Riya Do You Want to Meet?</h3>
+        <p class="side-hint">Choose a card and discover a little more about me! ♡</p>
+        <div class="riya-side-grid">
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'creative')"><span class="side-emoji">🎨</span><strong>Creative Me</strong><small>Ideas, aesthetics, and anything that looks good on a screen (or in real life!).</small><small style="margin-top:12px;color:#5D50BC;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'social')"><span class="side-emoji">📱</span><strong>Social Media Me</strong><small>Trends, reels, engagement, and a never-ending scroll (for work, obviously!).</small><small style="margin-top:12px;color:#4D74B7;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'chill')"><span class="side-emoji">☕</span><strong>Chill Me</strong><small>Good food, random thoughts, music, and happy little moments.</small><small style="margin-top:12px;color:#A56A00;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'work')"><span class="side-emoji">💻</span><strong>Work Mode</strong><small>Plans, deadlines, analytics and turning ideas into results.</small><small style="margin-top:12px;color:#318466;font-weight:700;">Click to reveal →</small></button>
+        </div>
+        <div id="riyaSideReveal" class="side-reveal">Choose a card and I'll reveal a little more. ♡</div>
+      </div>
+    </div>
+
+    <div class="random-fact-wrap">
+      <button class="fact-button" type="button" onclick="showRandomRiyaFact()">🎲 Or... try a random Riya fact →</button>
+      <div id="randomRiyaFact" class="random-fact">Spoiler alert: I have a lot of them! ♡</div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="cute-section">
+  <div class="wrap">
+    <div class="eyebrow">My Journey ♡</div>
+    <h2 class="sec-title">A little timeline of what I've been <span class="accent">working on</span></h2>
+    <div class="timeline-doodle">✦ learn → create → experiment → improve ✦</div>
+
+    <div class="experience-main">
+      <div class="experience-card">
+        <div class="experience-pin">✦</div>
+        <div class="card-top">
+          <div>
+            <div class="card-date">● 1 Year</div>
+            <h3>Digital Marketing Executive</h3>
+            <div class="org">Healthy Jeena Sikho</div>
+          </div>
+          <span class="status-pill">Main Experience</span>
+        </div>
+        <p class="experience-intro">Hands-on work across social media, content, local SEO, website management and digital branding — with a strong focus on creating and managing content.</p>
+        <div class="experience-tags">
+          <span>Social Media Management</span><span>Content Planning</span><span>Google Business Profile</span>
+          <span>Local SEO</span><span>Website Management</span><span>Keyword Research</span>
+          <span>Competitor Analysis</span><span>Google Analytics</span><span>Performance Reporting</span>
+          <span>YouTube Studio</span><span>Content Optimization</span><span>Digital Branding</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="other-work">
+      <div class="hand-label">also worked on ✎</div>
+      <h3>Other Projects &amp; Work</h3>
+      <div class="other-work-grid">
+        <div class="other-work-card">
+          <div class="ow-icon">🎁</div>
+          <h4>Exclusive Gifts</h4>
+          <p>Affiliate-based gifting brand work involving creative direction, product curation, design and content ideas.</p>
+        </div>
+        <div class="other-work-card">
+          <div class="ow-icon">💄</div>
+          <h4>Brand Collaboration Projects</h4>
+          <p>Creative project work involving storytelling, scripting, product presentation and social-media content concepts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="social-work" class="cute-section">
+  <div class="wrap">
+    <div class="eyebrow">📣 Social Media</div>
+    <h2 class="sec-title">Platforms I <span class="accent">worked across</span> ♡</h2>
+    <p class="section-note">From creating content to building communities, I’ve helped brands show up, engage and grow across multiple platforms.</p>
+    <div style="text-align:right;font-family:Caveat,cursive;color:#5C62A8;font-size:1.15rem;margin:-10px 12px 18px;">Different platforms, same goal — more reach, more impact! ♡</div>
+    <div class="social-flip-grid">
+      <div class="flip-card" tabindex="0" onclick="toggleFlip(this)" onkeydown="if(event.key==='Enter'||event.key===' ') {event.preventDefault();toggleFlip(this)}"><div class="flip-inner"><div class="flip-front instagram"><span class="platform-logo instagram-logo" aria-label="Instagram logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.5" cy="6.5" r="1.15" class="dot"></circle></svg></span><h3>Instagram</h3><small>Hover to flip · Tap to reveal ♡</small></div><div class="flip-back"><span class="back-label">Services I offer</span><ul><li>Content Planning</li><li>Reels &amp; Static Posts</li><li>Carousels &amp; Captions</li><li>Hashtags &amp; Content Calendar</li><li>Engagement &amp; Community Management</li><li>Trend Research &amp; Insights</li></ul><div style="margin-top:auto;font-family:Caveat,cursive;font-size:1.15rem;color:#7B4B67;">Good vibes only! ♡</div></div></div></div>
+      <div class="flip-card" tabindex="0" onclick="toggleFlip(this)" onkeydown="if(event.key==='Enter'||event.key===' ') {event.preventDefault();toggleFlip(this)}"><div class="flip-inner"><div class="flip-front facebook"><span class="platform-logo facebook-logo" aria-label="Facebook logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.8V4a23 23 0 0 0-2.7-.2c-2.7 0-4.5 1.6-4.5 4.5V10H7v3h2.8v8z"></path></svg></span><h3>Facebook</h3><small>Hover to flip · Tap to reveal ♡</small></div><div class="flip-back"><span class="back-label">Services I offer</span><ul><li>Content Planning</li><li>Posts &amp; Reels</li><li>Promotional Content</li><li>Scheduling</li><li>Community Engagement</li><li>Audience Insights &amp; Tracking</li></ul><div style="margin-top:auto;font-family:Caveat,cursive;font-size:1.15rem;color:#47638D;">Build communities ♡</div></div></div></div>
+      <div class="flip-card" tabindex="0" onclick="toggleFlip(this)" onkeydown="if(event.key==='Enter'||event.key===' ') {event.preventDefault();toggleFlip(this)}"><div class="flip-inner"><div class="flip-front youtube"><span class="platform-logo youtube-logo" aria-label="YouTube logo"><svg viewBox="0 0 28 20" aria-hidden="true"><path d="M26.4 3.2a3.5 3.5 0 0 0-2.5-2.5C21.7 0 14 0 14 0S6.3 0 4.1.7a3.5 3.5 0 0 0-2.5 2.5C.9 5.5.9 10 .9 10s0 4.5.7 6.8a3.5 3.5 0 0 0 2.5 2.5C6.3 20 14 20 14 20s7.7 0 9.9-.7a3.5 3.5 0 0 0 2.5-2.5c.7-2.3.7-6.8.7-6.8s0-4.5-.7-6.8"></path><path class="play" d="M11.5 14.3 18 10l-6.5-4.3z"></path></svg></span><h3>YouTube</h3><small>Hover to flip · Tap to reveal ♡</small></div><div class="flip-back"><span class="back-label">Services I offer</span><ul><li>YouTube Shorts</li><li>Content Ideas</li><li>Titles &amp; Descriptions</li><li>Content Planning</li><li>YouTube Studio</li><li>Performance Tracking</li></ul><div style="margin-top:auto;font-family:Caveat,cursive;font-size:1.15rem;color:#8C4D54;">Turn ideas into videos ♡</div></div></div></div>
+      <div class="flip-card" tabindex="0" onclick="toggleFlip(this)" onkeydown="if(event.key==='Enter'||event.key===' ') {event.preventDefault();toggleFlip(this)}"><div class="flip-inner"><div class="flip-front linkedin"><span class="platform-logo linkedin-logo" aria-label="LinkedIn logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="3.2" height="11"></rect><circle cx="5.6" cy="5.2" r="1.7"></circle><path d="M10 9h3.1v1.5c.8-1.1 2-1.9 3.8-1.9 3.7 0 4.4 2.5 4.4 5.8V20h-3.2v-5c0-1.2 0-2.9-1.9-2.9s-2.2 1.4-2.2 2.8V20H10z"></path></svg></span><h3>LinkedIn</h3><small>Hover to flip · Tap to reveal ♡</small></div><div class="flip-back"><span class="back-label">Services I offer</span><ul><li>Professional Content</li><li>Company Updates</li><li>Product / Service Posts</li><li>Employee &amp; Team Content</li><li>Carousels &amp; Copywriting</li><li>Engagement &amp; Analytics</li></ul><div style="margin-top:auto;font-family:Caveat,cursive;font-size:1.15rem;color:#4B7769;">Build professional connections ♡</div></div></div></div>
+      <div class="flip-card" tabindex="0" onclick="toggleFlip(this)" onkeydown="if(event.key==='Enter'||event.key===' ') {event.preventDefault();toggleFlip(this)}"><div class="flip-inner"><div class="flip-front gmb"><span class="platform-logo gmb-logo" aria-label="Google Business Profile logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="roof" d="M3 10h18L19.6 6H4.4z"></path><path d="M5 10v8h14v-8"></path><path class="door" d="M9.3 18v-4h5.4v4"></path><path class="g-letter" d="M17.6 3.2A8.6 8.6 0 0 0 12 1.5a8.8 8.8 0 1 0 8.8 8.8c0-.7-.1-1.4-.2-2.1h-8.6v3.2h5c-.5 1.5-1.9 2.5-3.6 2.5a5.2 5.2 0 1 1 3.7-8.8z"></path></svg></span><h3>Google My Business</h3><small>Hover to flip · Tap to reveal ♡</small></div><div class="flip-back"><span class="back-label">Services I offer</span><ul><li>Google Business Profile Management</li><li>Profile Optimization</li><li>Local Visibility</li><li>Business Posts</li><li>Review Awareness</li><li>Performance Monitoring</li></ul><div style="margin-top:auto;font-family:Caveat,cursive;font-size:1.15rem;color:#856327;">Get found locally ♡</div></div></div></div>
+    </div>
+    <div style="text-align:center;font-family:Caveat,cursive;color:#6C63A9;font-size:1.25rem;margin:24px 0 -4px;">Scroll · hover · flip · click / tap ✦</div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h2 class="sec-title">Selected <span class="accent">work</span></h2>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <span class="proj-tag">SEO</span>
+        <h3>Category Blog Rewrites</h3>
+        <p>Full audits and SEO-optimized rewrites across wheelchair, oxygen concentrator, CPAP, and SpO2 blog categories, with JSON-LD schema markup.</p>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">Social Media</span>
+        <h3>Instagram Growth Strategy</h3>
+        <p>Bio, content strategy, and highlight architecture rebuilt for a medical equipment brand, alongside 40+ produced short-form reels.</p>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">Local SEO</span>
+        <h3>Google Business Profile</h3>
+        <p>Optimized listings and managed WhatsApp campaign cycles to improve local discovery and response rates.</p>
+      </div>
+      <div class="proj-card">
+        <span class="proj-tag">Brand</span>
+        <h3>Exclusive Gifts</h3>
+        <p>Founded and ran an affiliate-based gifting brand, handling design, product curation, and freelance client work via Canva.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="case-studies" class="cute-section">
+  <div class="wrap">
+    <div class="eyebrow">Case Studies ✦</div>
+    <h2 class="sec-title">Real Projects. <span class="accent">Real Impact.</span></h2>
+    <p class="section-note">A closer look at how I think, create and solve content challenges.</p>
+
+    <div class="case-grid">
+      <article class="case-card">
+        <div class="case-number">01</div>
+        <span class="proj-tag">Healthy Jeena Sikho</span>
+        <h3>Making Healthcare Content More Relatable</h3>
+        <div class="case-section"><b>Objective</b><p>Improve low social media views and reach.</p></div>
+        <div class="case-section"><b>Research &amp; Observation</b><p>Healthcare content was often educational, heavy and overly serious. I analyzed other companies, the audience and how content was being received.</p></div>
+        <div class="case-section"><b>Gap Identified</b><p>The educational value was useful, but the presentation needed a more relatable and engaging element.</p></div>
+        <div class="case-section"><b>Strategy</b><p>Keep the useful information while introducing lighter, more engaging ways to communicate around products such as wheelchairs, hospital beds and oxygen cylinders.</p></div>
+        <div class="case-section"><b>Execution</b><p>Planned content around audience needs, hooks, captions, descriptions and more engaging video messaging.</p></div>
+        <div class="case-section"><b>Performance</b><p>People started watching more, and reach, views, likes and followers began improving.</p></div>
+        <div class="case-section learning"><b>Learning</b><p>Healthcare content doesn't always have to feel heavy. Useful information can be presented in a relatable and engaging way.</p></div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-number">02</div>
+        <span class="proj-tag">Employee Engagement</span>
+        <h3>Turning Employee Engagement into Social Media Content</h3>
+        <div class="case-section"><b>Objective</b><p>Increase employee engagement while creating relatable social media content.</p></div>
+        <div class="case-section"><b>Challenge</b><p>Long working hours and work pressure meant employees had limited interaction and there was little employee-led fun content.</p></div>
+        <div class="case-section"><b>Strategy</b><p>Use content creation itself as a way to give employees a break, help them interact and involve them in the creative process.</p></div>
+        <div class="case-section"><b>Execution</b><p>Planned small games, shoots and fun content. Employees who were initially uncomfortable on camera were gradually encouraged to participate.</p></div>
+        <div class="case-section"><b>Performance</b><p>One employee-led reel achieved 20,000+ reach, and overall content reach started coming in above 20,000.</p></div>
+        <div class="case-section"><b>Impact</b><p>Employees enjoyed participating, while communication, acting and content-making skills also improved.</p></div>
+        <div class="case-section learning"><b>Learning</b><p>Good content doesn't always start with a trend. Sometimes it starts with people.</p></div>
+      </article>
+
+      <article class="case-card">
+        <div class="case-number">03</div>
+        <span class="proj-tag">Exclusive Gifts × MV Cosmetics</span>
+        <h3>Turning Two Products into One Giftable Concept</h3>
+        <div class="case-section"><b>Objective</b><p>Combine gifting and makeup into a creative concept that positioned makeup as a gift.</p></div>
+        <div class="case-section"><b>Strategy</b><p>Instead of simply promoting a product, build a story around the idea: if makeup is to be gifted, how can it be presented as a thoughtful gift?</p></div>
+        <div class="case-section"><b>Execution</b><p>Developed the collaboration concept “MV Gifts”, created the story and script, planned product presentation and acted in the shoot.</p></div>
+        <div class="case-section"><b>Result</b><p>The concept helped audiences see makeup as a gifting option through Exclusive Gifts, and affiliate-based sales followed.</p></div>
+        <div class="case-section"><b>Contribution</b><p>Creative ideation, storytelling, script development, collaboration concept, content planning and shoot execution.</p></div>
+        <div class="case-section learning"><b>Learning</b><p>Sometimes creativity is not about creating a completely new product — it's about presenting an existing product in a completely new way.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="cute-section process-section">
+  <div class="wrap">
+    <div class="eyebrow">✦ How I Work</div>
+    <h2 class="sec-title">How I Work ♡</h2>
+    <div style="display:inline-block;background:#FFDCEB;padding:7px 18px;border-radius:999px;transform:rotate(-2deg);font-family:Caveat,cursive;font-size:1.55rem;color:var(--navy);margin-bottom:22px;">Behind every piece of content, there’s a thought. ♡</div>
+
+    <div class="process-intro">
+      <div class="process-note-card">I don’t start with “What should we post today?”<br>I start with <b>“Why would someone want to stop and watch this?”</b> ♥</div>
+      <div class="process-middle">Before creating anything, I try to understand the brand, the audience, the purpose and the problem we are trying to solve.<br><br>Sometimes that means noticing that healthcare content has become too serious. Sometimes it means turning employee interaction into content people actually enjoy. And sometimes, it means looking at two completely different products and thinking, “What if we tell one story with both?” ♡</div>
+      <div class="process-side-note"><b>That’s how I approach content.</b>→ Start with WHY.<br>→ Find the story.<br>→ Make people care.<br>→ See what happens.<br>→ Do it better next time. ☺</div>
+    </div>
+
+    <div class="process-track">
+      <div class="process-phase discover">
+        <div class="phase-label">01 · Discover</div>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>🔎</span><b>Research</b><small>Understand the brand, audience, competitors, trends &amp; objective.</small></button>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>💡</span><b>Content Idea</b><small>Find the content angle, message or story.</small></button>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>📝</span><b>Creative Brief</b><small>Define the purpose, audience, format, tone &amp; direction.</small></button>
+      </div>
+      <div class="process-phase create">
+        <div class="phase-label">02 · Create</div>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>🎯</span><b>Hook &amp; Script</b><small>Build the opening, storytelling and key message.</small></button>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>🎥</span><b>Create / Shoot</b><small>Turn the idea into reels, videos, posts or other formats.</small></button>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>✂️</span><b>Edit</b><small>Pacing, captions, transitions, visuals and platform-friendly presentation.</small></button>
+      </div>
+      <div class="process-phase publish">
+        <div class="phase-label">03 · Publish</div>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>💬</span><b>Caption</b><small>Write clear, engaging copy with the right CTA.</small></button>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>🚀</span><b>Publish</b><small>Choose the platform, format and publishing setup.</small></button>
+      </div>
+      <div class="process-phase improve">
+        <div class="phase-label">04 · Learn &amp; Improve</div>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>📊</span><b>Analyse</b><small>Review reach, views, engagement and audience response.</small></button>
+        <button type="button" class="process-step" onclick="toggleProcess(this)"><span>✨</span><b>Improve</b><small>Use what I learn to make the next piece of content better.</small></button>
+      </div>
+    </div>
+    <div id="processDetail" class="process-detail">Click any step to see the thinking behind it. ♡</div>
+    <div class="process-footer-note">Because for me, content creation doesn’t end when the post goes live. <span style="background:#FFDCEB;padding:2px 10px;border-radius:999px;">That’s where the learning begins. ♡</span></div>
+  </div>
+</section>
+
+<section id="skills" class="cute-section">
+  <div class="wrap">
+    <div class="eyebrow">Skills ✦</div>
+    <h2 class="sec-title">What I bring to the <span class="accent">table</span></h2>
+    <p class="section-note">Different skills, one creative mindset. ♡ Hover the skill pills to explore.</p>
+
+    <div class="skills-zones">
+      <div class="skill-zone social-zone">
+        <div class="zone-head"><span class="zone-icon">📣</span><div><h3>Social Media</h3><p>Plan · publish · engage · analyse</p></div></div>
+        <div class="orbit-pills">
+          <span data-tip="Managing day-to-day brand presence">Social Media Management</span>
+          <span data-tip="Building content around audience needs">Content Strategy</span>
+          <span data-tip="Planning what goes out and when">Content Planning</span>
+          <span data-tip="Keeping conversations active">Community Engagement</span>
+          <span data-tip="Reading performance signals">Social Media Analytics</span>
+          <span data-tip="Finding relevant trends and formats">Trend Research</span>
+        </div>
+      </div>
+
+      <div class="skill-zone content-zone">
+        <div class="zone-head"><span class="zone-icon">✏️</span><div><h3>Content Creation</h3><p>IDEA → HOOK → STORY → CONTENT</p></div></div>
+        <div class="content-flow">
+          <span>Content Ideation</span><i>→</i><span>Hooks</span><i>→</i><span>Storytelling</span><i>→</i><span>Copywriting</span><i>→</i><span>Captions</span>
+        </div>
+      </div>
+
+      <div class="skill-zone marketing-zone">
+        <div class="zone-head"><span class="zone-icon">📊</span><div><h3>Digital Marketing</h3><p>Research · visibility · measurement</p></div></div>
+        <div class="mini-dashboard">
+          <div class="fake-chart"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="dashboard-tags">
+            <span>SEO</span><span>Local SEO</span><span>Google Business Profile</span><span>Keyword Research</span><span>Competitor Analysis</span><span>Website Management</span><span>Analytics &amp; Reporting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="cute-section">
+  <div class="wrap">
+    <div class="eyebrow">Tools &amp; Software ✦</div>
+    <h2 class="sec-title">My Creative <span class="accent">Toolkit</span></h2>
+    <p class="section-note">The tools I use to turn ideas into actual work. ♡ Click a category to open the toolbox.</p>
+
+    <div class="toolbox">
+      <div class="tool-category-tabs">
+        <button class="tool-tab active" type="button" onclick="openToolCategory('marketing',this)">📊 Marketing &amp; Analytics</button>
+        <button class="tool-tab" type="button" onclick="openToolCategory('content',this)">🎬 Content &amp; Social</button>
+        <button class="tool-tab" type="button" onclick="openToolCategory('ai',this)">✨ AI &amp; Productivity</button>
+      </div>
+
+      <div class="tool-shelf active" id="tool-marketing">
+        <div class="tool-item"><span>GB</span><b>Google Business Profile</b><small>Local visibility &amp; profile management</small></div>
+        <div class="tool-item"><span>G</span><b>Google Analytics</b><small>Website &amp; performance insights</small></div>
+        <div class="tool-item"><span>GS</span><b>Google Search Console</b><small>Search performance &amp; indexing checks</small></div>
+        <div class="tool-item"><span>GK</span><b>Google Keyword Planner</b><small>Keyword research</small></div>
+        <div class="tool-item"><span>SM</span><b>SEMrush</b><small>SEO &amp; competitor research</small></div>
+        <div class="tool-item"><span>U</span><b>Ubersuggest</b><small>Keyword &amp; SEO research</small></div>
+        <div class="tool-item"><span>AP</span><b>AnswerThePublic</b><small>Content &amp; search-question research</small></div>
+        <div class="tool-item"><span>W</span><b>WordPress</b><small>Website management</small></div>
+        <div class="tool-item"><span>Wx</span><b>Wix</b><small>Website management</small></div>
+      </div>
+
+      <div class="tool-shelf" id="tool-content">
+        <div class="tool-item"><span>C</span><b>Canva</b><small>Design &amp; content creation</small></div>
+        <div class="tool-item"><span>B</span><b>Buffer</b><small>Social scheduling</small></div>
+        <div class="tool-item"><span>M</span><b>Meta Business Suite</b><small>Meta content management &amp; insights</small></div>
+        <div class="tool-item"><span>✂</span><b>CapCut</b><small>Video editing</small></div>
+        <div class="tool-item"><span>✂</span><b>VN</b><small>Video editing</small></div>
+        <div class="tool-item"><span>▶</span><b>YouTube Studio</b><small>Channel management &amp; analytics</small></div>
+      </div>
+
+      <div class="tool-shelf" id="tool-ai">
+        <div class="tool-item"><span>AI</span><b>ChatGPT</b><small>Idea development &amp; content assistance</small></div>
+        <div class="tool-item"><span>AI</span><b>Claude</b><small>Draft refinement &amp; content assistance</small></div>
+        <div class="tool-item"><span>AI</span><b>Gemini</b><small>Research &amp; idea assistance</small></div>
+      </div>
+      <div class="tool-note">Tools don't create the idea. They help me bring it to life. ♡</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="contact-section-cute">
+  <div class="wrap">
+    <div class="eyebrow">Contact ✦</div>
+    <h2 class="sec-title">Let’s <span class="accent">talk</span> ♡</h2>
+    <p class="section-note contact-note">Have an opportunity, project or just want to say hi? Pick a way to connect. I’d love to hear from you.</p>
+
+    <div class="contact-buttons-grid">
+      <a class="contact-action whatsapp" href="https://wa.me/918168928497?text=Hi%20Riya!%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%20%5E%5E" target="_blank" rel="noopener">
+        <span class="contact-action-icon">💬</span>
+        <span class="contact-action-main"><b>WhatsApp</b><small>Quick chat? ♡</small></span>
+        <span class="contact-action-arrow">→</span>
+      </a>
+      <a class="contact-action email" href="mailto:riyabarman1017@gmail.com?subject=Portfolio%20%2F%20Work%20Opportunity">
+        <span class="contact-action-icon">✉</span>
+        <span class="contact-action-main"><b>Email Me</b><small>For detailed conversations ♡</small></span>
+        <span class="contact-action-arrow">→</span>
+      </a>
+      <a class="contact-action linkedin" href="https://www.linkedin.com/in/riya-barman-artist" target="_blank" rel="noopener">
+        <span class="contact-action-icon">in</span>
+        <span class="contact-action-main"><b>LinkedIn</b><small>Let’s connect professionally ♡</small></span>
+        <span class="contact-action-arrow">→</span>
+      </a>
+      <div class="contact-action location" role="group" aria-label="Location">
+        <span class="contact-action-icon">📍</span>
+        <span class="contact-action-main"><b>Based in Ambala</b><small>Open to Mohali · Chandigarh · Panchkula</small></span>
+        <span class="contact-action-arrow">♡</span>
+      </div>
+    </div>
+
+    <div class="contact-bottom-row">
+      <div class="contact-hand-note">No numbers on display — just tap a button and let’s talk. ♡</div>
+      <div class="contact-mini-form">
+        <div class="contact-mini-title">Or send a message here</div>
+        <form id="contactForm" class="form-grid" action="https://formspree.io/f/xyeyrajw" method="POST">
+          <div class="field"><label>Your Name *</label><input type="text" name="name" required></div>
+          <div class="field"><label>Email *</label><input type="email" name="email" required></div>
+          <div class="field"><label>Company</label><input type="text" name="company"></div>
+          <div class="field"><label>Role Hiring For</label><input type="text" name="role"></div>
+          <div class="field full"><label>Job Location</label><input type="text" name="job_location" placeholder="Mohali / Chandigarh / Panchkula"></div>
+          <div class="field full"><label>Message *</label><textarea name="message" required placeholder="Tell me about the role or opportunity..."></textarea></div>
+          <input type="hidden" name="_subject" value="New portfolio message — Riya Barman">
+          <div class="field full form-submit"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">Send Message</button></div>
+          <div id="formStatus" class="field full" style="display:none;font-size:0.9rem;font-weight:600;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Riya Barman. All rights reserved.</footer>
+
+
+
+<script>
+/* ---------------- Interactive About section ---------------- */
+const riyaQuizQuestions = [
+  {
+    q: "What’s my favourite part of digital marketing?",
+    options: ["SEO", "Social Media", "Paid Ads", "Email Marketing"],
+    answer: "Social Media",
+    explain: "Social media is the part of digital marketing I enjoy the most."
+  },
+  {
+    q: "Which content format do I enjoy working with?",
+    options: ["Reels & short-form content", "Only email newsletters", "Only long reports", "Only banner ads"],
+    answer: "Reels & short-form content",
+    explain: "I enjoy turning ideas into engaging social content, especially reels and short-form videos."
+  },
+  {
+    q: "What comes first in my content creation process?",
+    options: ["Publish", "Research", "Caption", "Edit"],
+    answer: "Research",
+    explain: "I start by understanding the brand, audience, competitors, trends and objective."
+  },
+  {
+    q: "Which tool do I use for social media designs?",
+    options: ["Canva", "Google Analytics", "Search Console", "YouTube Studio"],
+    answer: "Canva",
+    explain: "Canva is one of the tools I use for designing social media content."
+  },
+  {
+    q: "Which platforms are part of my social media work?",
+    options: ["Instagram, Facebook, YouTube, LinkedIn & GMB", "Only Instagram", "Only LinkedIn", "Only YouTube"],
+    answer: "Instagram, Facebook, YouTube, LinkedIn & GMB",
+    explain: "Those are the five platforms shown in my Social Media Work section."
+  }
+];
+
+let riyaQuizOrder = [...riyaQuizQuestions];
+let riyaQuizIndex = 0;
+let riyaQuizAnswered = false;
+
+function shuffleArray(arr){
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function renderRiyaQuizQuestion(){
+  const item = riyaQuizOrder[riyaQuizIndex];
+  const counter = document.getElementById("riyaQuizCounter");
+  const question = document.getElementById("riyaQuizQuestion");
+  const optionsWrap = document.getElementById("riyaQuizOptions");
+  const feedback = document.getElementById("riyaQuizFeedback");
+  const nextBtn = document.getElementById("riyaNextBtn");
+
+  if(!counter || !question || !optionsWrap) return;
+
+  riyaQuizAnswered = false;
+  counter.textContent = `Q${riyaQuizIndex + 1} / ${riyaQuizOrder.length}`;
+  question.textContent = item.q;
+  feedback.textContent = "";
+  nextBtn.disabled = true;
+  nextBtn.textContent = riyaQuizIndex === riyaQuizOrder.length - 1 ? "Finish →" : "Next question →";
+
+  optionsWrap.innerHTML = "";
+  shuffleArray(item.options).forEach((option) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "riya-option";
+    btn.textContent = option;
+    btn.addEventListener("click", () => answerRiyaQuiz(btn, option === item.answer, item.explain));
+    optionsWrap.appendChild(btn);
+  });
+}
+
+function answerRiyaQuiz(button, correct, explain){
+  if(riyaQuizAnswered) return;
+  riyaQuizAnswered = true;
+
+  document.querySelectorAll("#riyaQuizOptions .riya-option").forEach(btn => btn.disabled = true);
+  if(correct){
+    button.classList.add("correct");
+  }else{
+    button.classList.add("wrong");
+    document.querySelectorAll("#riyaQuizOptions .riya-option").forEach(btn => {
+      if(btn.textContent === riyaQuizOrder[riyaQuizIndex].answer) btn.classList.add("correct");
+    });
+  }
+
+  const feedback = document.getElementById("riyaQuizFeedback");
+  const nextBtn = document.getElementById("riyaNextBtn");
+  feedback.textContent = correct ? "✓ You got it! ♡" : `Not quite — ${explain}`;
+  feedback.style.color = correct ? "#2C8A5A" : "#A75A70";
+  nextBtn.disabled = false;
+}
+
+function startRiyaQuiz(){
+  riyaQuizOrder = shuffleArray(riyaQuizQuestions);
+  riyaQuizIndex = 0;
+  renderRiyaQuizQuestion();
+}
+
+function nextRiyaQuestion(){
+  if(!riyaQuizAnswered) return;
+  if(riyaQuizIndex < riyaQuizOrder.length - 1){
+    riyaQuizIndex += 1;
+    renderRiyaQuizQuestion();
+  }else{
+    riyaQuizOrder = shuffleArray(riyaQuizQuestions);
+    riyaQuizIndex = 0;
+    renderRiyaQuizQuestion();
+  }
+}
+
+function showRiyaSide(button, key){
+  const messages = {
+    creative: "I like turning ideas into visual stories — from the first concept and aesthetic direction to the final piece of content. ♡",
+    social: "This is where I naturally switch into trend, reel, caption, engagement and analytics mode. 📱",
+    chill: "Outside work mode, I like keeping things simple: good food, music, random thoughts and little happy moments. ☕",
+    work: "Give me a goal, a plan and a deadline — I enjoy turning ideas into organised, measurable work. 💻"
+  };
+  document.querySelectorAll(".riya-side-card").forEach(card => card.classList.remove("selected"));
+  button.classList.add("selected");
+  const reveal = document.getElementById("riyaSideReveal");
+  if(reveal) reveal.textContent = messages[key] || "A little more about me. ♡";
+}
+
+const riyaFacts = [
+  "My favourite part of digital marketing is social media. ♡",
+  "I like researching before I start creating content. ✦",
+  "Canva is one of the tools I use for social media design.",
+  "I work across Instagram, Facebook, YouTube, LinkedIn and Google Business Profile.",
+  "For me, content creation doesn’t end when a post goes live — that’s where the learning begins. ♡"
+];
+
+function showRandomRiyaFact(){
+  const box = document.getElementById("randomRiyaFact");
+  if(!box) return;
+  box.textContent = riyaFacts[Math.floor(Math.random() * riyaFacts.length)];
+}
+
+/* ---------------- Social Media flip cards ---------------- */
+function toggleFlip(card){
+  card.classList.toggle("flipped");
+}
+
+/* ---------------- Tools ---------------- */
+function openToolCategory(category, button){
+  document.querySelectorAll(".tool-tab").forEach(tab => tab.classList.remove("active"));
+  if(button) button.classList.add("active");
+  document.querySelectorAll(".tool-shelf").forEach(shelf => shelf.classList.remove("active"));
+  const shelf = document.getElementById("tool-" + category);
+  if(shelf) shelf.classList.add("active");
+}
+
+/* ---------------- Contact form ---------------- */
+(function(){
+  const contactForm = document.getElementById("contactForm");
+  if(!contactForm) return;
+  const formStatus = document.getElementById("formStatus");
+  contactForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { "Accept": "application/json" }
+    }).then(response => {
+      formStatus.style.display = "block";
+      if(response.ok){
+        formStatus.style.color = "#15803D";
+        formStatus.textContent = "✓ Message sent — I’ll get back to you soon!";
+        contactForm.reset();
+      }else{
+        formStatus.style.color = "#B91C1C";
+        formStatus.textContent = "Something went wrong. Please email me directly instead.";
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    }).catch(() => {
+      formStatus.style.display = "block";
+      formStatus.style.color = "#B91C1C";
+      formStatus.textContent = "Something went wrong. Please email me directly instead.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    });
+  });
+})();
+
+/* Navbar dropdown */
+const navDropBtn = document.querySelector('.nav-dropbtn');
+const navDrop = document.querySelector('.nav-dropdown');
+if(navDropBtn && navDrop){
+  navDropBtn.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const open = navDrop.classList.toggle('open');
+    navDropBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', (e)=>{
+    if(!navDrop.contains(e.target)){
+      navDrop.classList.remove('open');
+      navDropBtn.setAttribute('aria-expanded','false');
+    }
+  });
+}
+
+/* Render the first real question immediately, as shown in the reference. */
+document.addEventListener("DOMContentLoaded", () => {
+  renderRiyaQuizQuestion();
+});
+</script>
+
+
+</body>
+</html>
