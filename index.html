@@ -6,7 +6,8 @@
 <title>Riya Barman | Digital Marketing Executive</title>
 <meta name="description" content="Riya Barman — Digital Marketing Executive | Social Media, Local SEO, Website Management">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#F7F8FC;
@@ -221,6 +222,715 @@
   @media(max-width:560px){.quiz-explain{margin-left:0;}}
   .quiz-explain.show{display:block;}
   .quiz-explain b{color:var(--indigo-deep);}
+
+  /* Cute portfolio upgrade */
+  .cute-section{position:relative;overflow:hidden;}
+  .section-note{color:var(--muted);max-width:760px;margin:-30px 0 34px;font-size:.98rem;}
+  .about-playground{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;position:relative;}
+  .about-quiz-box,.side-box,.experience-card,.other-work,.case-card,.process-detail,.toolbox{
+    background:var(--card);border:1px solid var(--border);border-radius:24px;box-shadow:0 12px 35px rgba(23,23,35,.05);
+  }
+  .about-quiz-box,.side-box{padding:30px;}
+  .mini-label,.hand-label{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--indigo);}
+  .about-quiz-box h3{font-size:1.45rem;margin:10px 0 8px;}
+  .about-quiz-box p{color:var(--muted);margin-bottom:18px;}
+  .riya-quiz-options{display:grid;gap:10px;}
+  .riya-option{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:12px 15px;text-align:left;font:600 .9rem Inter,sans-serif;cursor:pointer;transition:.2s;}
+  .riya-option:hover{border-color:var(--indigo);transform:translateX(3px);}
+  .riya-option.correct{background:#E8FBF0;border-color:var(--green);}
+  .riya-option.wrong{background:#FDECEC;border-color:#EF4444;}
+  .riya-quiz-feedback{min-height:30px;padding-top:10px;font-size:.88rem;font-weight:700;}
+  .mini-btn{padding:9px 16px;margin-top:6px;}
+  .side-hint{color:var(--muted);font-size:.88rem;margin:5px 0 15px;}
+  .riya-side-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .riya-side-card{border:1px solid var(--border);background:var(--bg);border-radius:18px;padding:17px;text-align:left;cursor:pointer;transition:.25s;min-height:125px;}
+  .riya-side-card:hover,.riya-side-card.selected{transform:translateY(-4px) rotate(-1deg);border-color:var(--indigo);box-shadow:0 10px 22px rgba(108,99,255,.12);}
+  .side-emoji{display:block;font-size:1.6rem;margin-bottom:8px;}
+  .riya-side-card strong,.riya-side-card small{display:block;}
+  .riya-side-card strong{font-size:.94rem;}
+  .riya-side-card small{color:var(--muted);font-size:.76rem;margin-top:3px;}
+  .side-reveal{margin-top:15px;padding:14px 16px;border-radius:14px;background:var(--indigo-pale);color:var(--indigo-deep);font-size:.88rem;min-height:48px;}
+  .doodle-note{position:absolute;font-family:cursive;color:var(--indigo-deep);font-size:.8rem;transform:rotate(-7deg);z-index:2;}
+  .note-one{left:-18px;top:-25px}.note-two{right:-12px;bottom:-25px;transform:rotate(6deg);}
+  .random-fact-wrap{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap;}
+  .fact-button{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:13px 20px;font:700 .88rem Inter,sans-serif;cursor:pointer;box-shadow:4px 5px 0 var(--indigo);}
+  .random-fact{background:var(--sky-pale);padding:12px 18px;border-radius:16px;color:var(--ink);font-size:.9rem;flex:1;min-width:240px;}
+  .timeline-doodle{text-align:center;color:var(--indigo);font-family:cursive;margin:-32px 0 30px;}
+  .experience-main{max-width:900px;margin:auto;}
+  .experience-card{padding:32px;position:relative;}
+  .experience-pin{position:absolute;right:24px;top:-14px;background:var(--sky-pale);padding:7px 12px;border-radius:20px;transform:rotate(8deg);}
+  .experience-intro{color:var(--muted);margin:15px 0 20px;max-width:760px;}
+  .experience-tags{display:flex;gap:9px;flex-wrap:wrap;}
+  .experience-tags span{background:var(--indigo-pale);color:var(--indigo-deep);padding:7px 12px;border-radius:999px;font-size:.78rem;font-weight:700;}
+  .other-work{max-width:900px;margin:28px auto 0;padding:28px;position:relative;}
+  .other-work h3{font-size:1.25rem;margin:5px 0 18px;}
+  .other-work-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .other-work-card{padding:20px;border:1px dashed #D9D8EA;border-radius:18px;background:#FCFCFF;}
+  .ow-icon{font-size:1.5rem;margin-bottom:8px}.other-work-card h4{margin-bottom:5px}.other-work-card p{font-size:.86rem;color:var(--muted);}
+  .social-flip-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;perspective:1200px;}
+  .flip-card{height:330px;perspective:1200px;cursor:pointer;outline:none;}
+  .flip-inner{height:100%;width:100%;position:relative;transition:transform .65s cubic-bezier(.2,.75,.25,1);transform-style:preserve-3d;}
+  .flip-card:hover .flip-inner,.flip-card.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;border:1px solid var(--border);border-radius:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:22px;text-align:center;box-shadow:0 12px 30px rgba(23,23,35,.05);}
+  .flip-front{background:linear-gradient(145deg,#fff,#F5F4FF);}
+  .flip-front h3{margin:12px 0 4px}.flip-front small{color:var(--muted);font-size:.75rem;}
+  .platform-logo{width:68px;height:68px;border-radius:22px;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:2rem;}
+  .facebook .platform-logo{background:#E8F1FF;color:#1877F2}.youtube .platform-logo{background:#FFE9E9;color:#FF0000}.linkedin .platform-logo{background:#E8F5FF;color:#0A66C2}.gmb .platform-logo{background:#EEF4FF;color:#4285F4;}
+  .flip-back{transform:rotateY(180deg);background:var(--ink);color:#fff;align-items:flex-start;text-align:left;justify-content:flex-start;}
+  .back-label{color:#C9C3FF;font-weight:800;font-size:.76rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;}
+  .flip-back ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;width:100%}.flip-back li{font-size:.78rem;padding-left:15px;position:relative;color:#F2F2F7}.flip-back li:before{content:'✦';position:absolute;left:0;color:#C9C3FF;}
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .case-card{padding:28px;position:relative;overflow:hidden;}
+  .case-number{position:absolute;right:20px;top:10px;font-size:3.2rem;font-weight:900;color:#EEEAFD;line-height:1;}
+  .case-card h3{font-size:1.2rem;margin:10px 0 20px;max-width:85%;}
+  .case-section{margin-top:14px}.case-section b{font-size:.75rem;color:var(--indigo);text-transform:uppercase;letter-spacing:.05em}.case-section p{color:var(--muted);font-size:.84rem;margin-top:3px;}
+  .case-section.learning{margin-top:20px;padding:15px;border-radius:16px;background:var(--indigo-pale);}
+  .process-story{display:flex;gap:18px;overflow-x:auto;padding:18px 4px 28px;margin-bottom:10px;scrollbar-width:thin;}
+  .process-story span{min-width:245px;background:#fff;border:1px dashed #D9D8EA;border-radius:18px;padding:17px;font-size:.86rem;color:var(--muted);box-shadow:0 7px 18px rgba(23,23,35,.04);}
+  .process-track{display:flex;gap:12px;align-items:stretch;overflow-x:auto;padding:10px 2px 18px;}
+  .process-phase{min-width:245px;padding:15px;border-radius:22px;border:1px solid var(--border);background:var(--card);}
+  .phase-label{font-size:.74rem;font-weight:800;color:var(--indigo);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;}
+  .process-step{width:100%;border:1px solid var(--border);background:var(--bg);border-radius:14px;padding:12px;text-align:left;display:grid;grid-template-columns:28px 1fr;gap:0 8px;margin-bottom:8px;cursor:pointer;font-family:Inter,sans-serif;}
+  .process-step span{grid-row:1/3}.process-step b{font-size:.82rem}.process-step small{font-size:.7rem;color:var(--muted);}.process-step:hover{border-color:var(--indigo);transform:translateX(2px);}
+  .process-detail{padding:17px 20px;color:var(--muted);font-size:.88rem;}
+  .skills-zones{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .skill-zone{border:1px solid var(--border);border-radius:24px;padding:26px;background:var(--card);min-height:300px;overflow:hidden;position:relative;}
+  .zone-head{display:flex;align-items:center;gap:12px;margin-bottom:22px}.zone-icon{width:46px;height:46px;border-radius:15px;background:var(--indigo-pale);display:flex;align-items:center;justify-content:center;font-size:1.3rem}.zone-head h3{font-size:1.05rem}.zone-head p{font-size:.74rem;color:var(--muted);}
+  .orbit-pills{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;padding-top:8px}.orbit-pills span{background:var(--bg);border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:.76rem;cursor:help;transition:.25s;position:relative}.orbit-pills span:hover{transform:translateY(-5px) scale(1.04);background:var(--indigo-pale);color:var(--indigo-deep);}
+  .orbit-pills span:after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);background:var(--ink);color:#fff;padding:7px 9px;border-radius:8px;font-size:.68rem;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}.orbit-pills span:hover:after{opacity:1;}
+  .content-flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding-top:25px}.content-flow span{padding:11px 13px;background:var(--sky-pale);border-radius:14px;font-size:.76rem;font-weight:700}.content-flow i{color:var(--indigo);font-style:normal;}
+  .mini-dashboard{margin-top:10px}.fake-chart{height:100px;display:flex;align-items:flex-end;gap:9px;border-bottom:1px solid var(--border);padding:0 10px 8px}.fake-chart span{width:14%;background:linear-gradient(to top,#C9C3FF,#8FA8FF);border-radius:8px 8px 0 0;animation:barFloat 2.8s ease-in-out infinite alternate}.fake-chart span:nth-child(1){height:30%}.fake-chart span:nth-child(2){height:48%}.fake-chart span:nth-child(3){height:38%}.fake-chart span:nth-child(4){height:70%}.fake-chart span:nth-child(5){height:88%}@keyframes barFloat{to{transform:translateY(-5px)}}
+  .dashboard-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.dashboard-tags span{font-size:.72rem;padding:6px 9px;border-radius:10px;background:var(--bg);border:1px solid var(--border);}
+  .toolbox{padding:26px}.tool-category-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.tool-tab{border:1px solid var(--border);background:var(--bg);border-radius:999px;padding:11px 15px;font:700 .78rem Inter,sans-serif;cursor:pointer}.tool-tab.active,.tool-tab:hover{background:var(--indigo);color:#fff;border-color:var(--indigo);}
+  .tool-shelf{display:none;grid-template-columns:repeat(3,1fr);gap:13px}.tool-shelf.active{display:grid;animation:shelfIn .35s ease}@keyframes shelfIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .tool-item{border:1px solid var(--border);border-radius:17px;padding:17px;background:#FCFCFF;transition:.2s}.tool-item:hover{transform:translateY(-4px);box-shadow:0 9px 20px rgba(23,23,35,.06)}.tool-item>span{width:38px;height:38px;border-radius:12px;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800;margin-bottom:9px}.tool-item b,.tool-item small{display:block}.tool-item b{font-size:.82rem}.tool-item small{font-size:.7rem;color:var(--muted);margin-top:4px}.tool-note{text-align:center;color:var(--muted);font-family:cursive;margin-top:20px;}
+  @media(max-width:1000px){.social-flip-grid{grid-template-columns:repeat(3,1fr)}.skills-zones{grid-template-columns:1fr 1fr}.case-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:760px){.about-playground{grid-template-columns:1fr}.social-flip-grid{grid-template-columns:1fr 1fr}.case-grid,.skills-zones{grid-template-columns:1fr}.tool-shelf.active{grid-template-columns:1fr 1fr}.doodle-note{display:none}}
+  @media(max-width:560px){.riya-side-grid,.other-work-grid,.social-flip-grid,.tool-shelf.active{grid-template-columns:1fr}.flip-card{height:300px}.process-phase{min-width:220px}.process-story span{min-width:230px}.toolbox{padding:18px}}
+
+
+
+  /* Section-by-section pastel palette — cute, soft and recruiter-friendly */
+  #about.cute-section{
+    background:
+      radial-gradient(circle at 8% 18%, rgba(255,196,214,.34), transparent 22%),
+      radial-gradient(circle at 92% 82%, rgba(212,201,255,.28), transparent 24%),
+      #FFF8FC;
+  }
+  #about.cute-section .about-quiz-box{background:#FFF1F7;border-color:#F3D7E4;}
+  #about.cute-section .side-box{background:#F8F3FF;border-color:#E5DAF7;}
+  #about.cute-section .riya-option{background:#FFFAFD;border-color:#F0DDE7;}
+  #about.cute-section .riya-option:hover{border-color:#E5A7BF;}
+  #about.cute-section .riya-side-card{background:#FFFCFD;border-color:#EADDE4;}
+  #about.cute-section .riya-side-card:nth-child(2){background:#F8F5FF;border-color:#E4DDF7;}
+  #about.cute-section .riya-side-card:nth-child(3){background:#F5FBFF;border-color:#DDECF5;}
+  #about.cute-section .riya-side-card:nth-child(4){background:#FFF9EF;border-color:#F1E1C4;}
+  #about.cute-section .side-reveal{background:#F2E8FF;color:#684E98;}
+  #about.cute-section .random-fact{background:#EAF7FF;border:1px solid #D8EBF5;}
+
+  #experience.cute-section{
+    background:
+      radial-gradient(circle at 92% 15%, rgba(196,239,222,.38), transparent 22%),
+      radial-gradient(circle at 8% 88%, rgba(255,222,191,.30), transparent 23%),
+      #FAFFF9;
+  }
+  #experience.cute-section .experience-card{background:#F4FBF7;border-color:#D6EBDD;}
+  #experience.cute-section .other-work{background:#FFF8F0;border-color:#F0DEC7;}
+  #experience.cute-section .experience-pin{background:#FFE9D7;}
+  #experience.cute-section .experience-tags span{background:#E8F7EE;color:#347B58;}
+  #experience.cute-section .other-work-card{background:#FFFCF8;border-color:#EADCCB;}
+  #experience.cute-section .timeline-doodle{color:#5D9273;}
+
+  #social-work.cute-section{
+    background:
+      radial-gradient(circle at 12% 16%, rgba(217,208,255,.38), transparent 22%),
+      radial-gradient(circle at 90% 84%, rgba(190,229,255,.32), transparent 24%),
+      #FAF8FF;
+  }
+  #social-work.cute-section .flip-front{background:linear-gradient(145deg,#FFFFFF,#F7F3FF);}
+  #social-work.cute-section .flip-card:nth-child(1) .flip-front{background:linear-gradient(145deg,#FFF8FB,#FFEAF3);border-color:#F1D6E0;}
+  #social-work.cute-section .flip-card:nth-child(2) .flip-front{background:linear-gradient(145deg,#F7FBFF,#EAF4FF);border-color:#D8E7F5;}
+  #social-work.cute-section .flip-card:nth-child(3) .flip-front{background:linear-gradient(145deg,#FFF8F8,#FFEDED);border-color:#F0D7D7;}
+  #social-work.cute-section .flip-card:nth-child(4) .flip-front{background:linear-gradient(145deg,#F7FBFF,#E8F4FF);border-color:#D3E3F4;}
+  #social-work.cute-section .flip-card:nth-child(5) .flip-front{background:linear-gradient(145deg,#F9FBFF,#EEF5FF);border-color:#DCE6F4;}
+  #social-work.cute-section .flip-back{background:linear-gradient(145deg,#332F4D,#4F4778);}
+  #social-work.cute-section .flip-back .back-label{color:#F3D7FF;}
+  #social-work.cute-section .flip-back li:before{color:#FFD8EC;}
+
+  #projects{
+    background:
+      radial-gradient(circle at 90% 20%, rgba(255,224,177,.30), transparent 21%),
+      radial-gradient(circle at 10% 78%, rgba(220,211,255,.25), transparent 22%),
+      #FFFCF7;
+  }
+  #projects .proj-card:nth-child(1){background:#FAF7FF;border-color:#E4DBF7;}
+  #projects .proj-card:nth-child(2){background:#FFF7FA;border-color:#F1DCE5;}
+  #projects .proj-card:nth-child(3){background:#F4FBF8;border-color:#D8EADF;}
+  #projects .proj-card:nth-child(4){background:#FFF9EF;border-color:#F0E0C7;}
+  #projects .proj-card:nth-child(1) .proj-tag{background:#EEE7FF;color:#6D5FA9;}
+  #projects .proj-card:nth-child(2) .proj-tag{background:#FFE8F0;color:#A45676;}
+  #projects .proj-card:nth-child(3) .proj-tag{background:#E7F6ED;color:#377B57;}
+  #projects .proj-card:nth-child(4) .proj-tag{background:#FFF0D5;color:#9B6D2A;}
+
+  #case-studies.cute-section{
+    background:
+      radial-gradient(circle at 7% 15%, rgba(255,209,220,.30), transparent 21%),
+      radial-gradient(circle at 94% 80%, rgba(206,226,255,.28), transparent 24%),
+      #FFF9F7;
+  }
+  #case-studies.cute-section .case-card:nth-child(1){background:#FFF5F8;border-color:#F0D8E1;}
+  #case-studies.cute-section .case-card:nth-child(2){background:#F4FBFF;border-color:#D8E9F3;}
+  #case-studies.cute-section .case-card:nth-child(3){background:#FFF9EF;border-color:#F0DEC6;}
+  #case-studies.cute-section .case-number{color:#EDE3EC;}
+  #case-studies.cute-section .case-card:nth-child(1) .case-section b{color:#AA5E7A;}
+  #case-studies.cute-section .case-card:nth-child(2) .case-section b{color:#4F86A4;}
+  #case-studies.cute-section .case-card:nth-child(3) .case-section b{color:#A87838;}
+  #case-studies.cute-section .case-card:nth-child(1) .case-section.learning{background:#FFE8F0;}
+  #case-studies.cute-section .case-card:nth-child(2) .case-section.learning{background:#E9F6FF;}
+  #case-studies.cute-section .case-card:nth-child(3) .case-section.learning{background:#FFF0D4;}
+
+  #process.process-section{
+    background:
+      radial-gradient(circle at 8% 18%, rgba(194,232,255,.34), transparent 22%),
+      radial-gradient(circle at 93% 85%, rgba(255,224,190,.28), transparent 23%),
+      #F8FCFF;
+  }
+  #process.process-section .process-story span{background:#FFFFFF;border-color:#DDEAF2;}
+  #process.process-section .process-phase.discover{background:#F0FBF7;border-color:#D5EAE0;}
+  #process.process-section .process-phase.create{background:#F7F2FF;border-color:#E5DBF6;}
+  #process.process-section .process-phase.publish{background:#FFF7EF;border-color:#F0DEC8;}
+  #process.process-section .process-phase.improve{background:#FFF9F1;border-color:#EFE1BE;}
+  #process.process-section .process-phase.discover .phase-label{color:#4C8A72;}
+  #process.process-section .process-phase.create .phase-label{color:#7862A8;}
+  #process.process-section .process-phase.publish .phase-label{color:#A46F3F;}
+  #process.process-section .process-phase.improve .phase-label{color:#9A7A2D;}
+  #process.process-section .process-step{background:rgba(255,255,255,.82);}
+  #process.process-section .process-step:hover{border-color:#B9A7D9;}
+  #process.process-section .process-detail{background:#FFFDFB;border-color:#EADFD4;}
+
+  #skills.cute-section{
+    background:
+      radial-gradient(circle at 90% 14%, rgba(222,214,255,.34), transparent 22%),
+      radial-gradient(circle at 10% 86%, rgba(206,239,225,.28), transparent 23%),
+      #FBFAFF;
+  }
+  #skills.cute-section .social-zone{background:#FFF4F9;border-color:#F0D8E3;}
+  #skills.cute-section .content-zone{background:#F7F3FF;border-color:#E3D9F4;}
+  #skills.cute-section .marketing-zone{background:#F1FBF6;border-color:#D5E9DD;}
+  #skills.cute-section .social-zone .zone-icon{background:#FFE2EE;}
+  #skills.cute-section .content-zone .zone-icon{background:#EDE4FF;}
+  #skills.cute-section .marketing-zone .zone-icon{background:#DFF3E8;}
+  #skills.cute-section .social-zone .orbit-pills span:hover{background:#FFE2EE;color:#9D5270;}
+  #skills.cute-section .content-zone .content-flow span{background:#EDE4FF;}
+  #skills.cute-section .marketing-zone .dashboard-tags span{background:#E8F6EE;border-color:#D7E9DE;}
+  #skills.cute-section .fake-chart span{background:linear-gradient(to top,#CDEAD9,#86CBA7);}
+
+  #tools.cute-section{
+    background:
+      radial-gradient(circle at 8% 18%, rgba(255,223,189,.34), transparent 22%),
+      radial-gradient(circle at 94% 82%, rgba(220,212,255,.30), transparent 22%),
+      #FFFDF8;
+  }
+  #tools.cute-section .toolbox{background:#FFFBF4;border-color:#EEDFC8;}
+  #tools.cute-section .tool-tab:nth-child(1){background:#FFF0D9;border-color:#F0D7AF;color:#9A6E2D;}
+  #tools.cute-section .tool-tab:nth-child(2){background:#EAF7FF;border-color:#D1E8F6;color:#477C9D;}
+  #tools.cute-section .tool-tab:nth-child(3){background:#F1E9FF;border-color:#E1D4F5;color:#75589F;}
+  #tools.cute-section .tool-tab.active:nth-child(1){background:#EECF95;color:#69491B;border-color:#E0BA6A;}
+  #tools.cute-section .tool-tab.active:nth-child(2){background:#B9DDF1;color:#315E79;border-color:#9EC8E1;}
+  #tools.cute-section .tool-tab.active:nth-child(3){background:#DCCAF4;color:#5A437C;border-color:#C8AFE9;}
+  #tools.cute-section .tool-item:nth-child(3n+1){background:#FFF7E9;border-color:#F0E0C5;}
+  #tools.cute-section .tool-item:nth-child(3n+2){background:#F3FAFF;border-color:#DDEBF4;}
+  #tools.cute-section .tool-item:nth-child(3n){background:#F8F3FF;border-color:#E7DDF3;}
+  #tools.cute-section .tool-item>span{background:#FFF0D8;color:#9A6D2C;}
+  #tools.cute-section .tool-note{color:#8A6D4A;}
+
+    background:
+      radial-gradient(circle at 12% 18%, rgba(255,206,220,.32), transparent 22%),
+      radial-gradient(circle at 90% 85%, rgba(218,210,255,.28), transparent 23%),
+      #FFF9FC;
+  }
+
+  /* Keep the Contact section unchanged as requested. */
+
+
+
+/* ===== Unified pastel + handwritten visual system ===== */
+:root{
+  --paper:#FBFAFF;
+  --paper-2:#F8F8FD;
+  --navy:#142454;
+  --soft-ink:#52607E;
+  --purple:#6958F5;
+  --purple-pale:#EEE9FF;
+  --pink:#FFDCEB;
+  --pink-border:#F6BFD6;
+  --blue:#DFEBFF;
+  --blue-border:#C5D9FA;
+  --mint:#DDF5EA;
+  --mint-border:#B9E4D2;
+  --yellow:#FFF0C8;
+  --yellow-border:#F5D99B;
+  --lav:#EAE6FF;
+  --lav-border:#CDC5F5;
+  --peach:#FFE5DB;
+  --peach-border:#F5C5B8;
+  --card-shadow:0 12px 30px rgba(20,36,84,.055);
+}
+html{scroll-padding-top:90px;}
+body{
+  background:
+    radial-gradient(circle at 12% 8%, rgba(238,233,255,.78), transparent 25%),
+    radial-gradient(circle at 88% 10%, rgba(255,220,235,.48), transparent 22%),
+    radial-gradient(circle at 82% 72%, rgba(221,245,234,.34), transparent 24%),
+    var(--paper) !important;
+  color:var(--navy) !important;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:radial-gradient(rgba(20,36,84,.045) .7px,transparent .7px);
+  background-size:20px 20px;opacity:.28;
+}
+section,#projects{background:transparent !important;}
+.cute-section{overflow:visible !important;}
+.wrap{position:relative;}
+.eyebrow{
+  display:inline-flex !important;align-items:center;gap:7px;
+  padding:8px 14px;border-radius:999px;background:rgba(234,230,255,.78) !important;
+  border:1px solid rgba(105,88,245,.10);color:var(--purple) !important;
+  text-transform:none !important;letter-spacing:0 !important;font-size:.82rem !important;
+  box-shadow:0 5px 18px rgba(105,88,245,.06);
+}
+h2.sec-title{
+  font-family:"Caveat","Segoe Print",cursive !important;
+  color:var(--navy) !important;font-size:clamp(2.7rem,5vw,4.2rem) !important;
+  font-weight:700 !important;letter-spacing:0 !important;margin:14px 0 18px !important;
+}
+h2.sec-title .accent{color:var(--purple) !important;}
+.section-note{font-size:1rem !important;color:#6A7690 !important;max-width:790px !important;margin:0 0 30px !important;}
+.cute-section .wrap:after,#projects .wrap:after{
+  content:"♡  ✦  →  ♡";position:absolute;right:8px;top:4px;color:#7568B8;
+  font-family:"Caveat",cursive;font-size:1.45rem;transform:rotate(-5deg);opacity:.8;
+}
+
+/* About — reference-style scrapbook layout */
+.about-head{
+  display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:center;margin-bottom:26px;
+}
+.about-title-copy p{max-width:670px;color:#68748C;font-size:1rem;line-height:1.8;}
+.about-title-copy .headline-note{display:inline-block;margin:12px 0 14px;padding:6px 16px;background:var(--pink);border-radius:999px;transform:rotate(-2deg);font-family:"Caveat",cursive;font-size:1.35rem;color:var(--navy);}
+.about-photo-wrap{position:relative;display:flex;justify-content:center;}
+.about-photo-frame{width:min(300px,100%);background:#fff;padding:12px 12px 18px;border:1px solid #E4E0F0;box-shadow:0 14px 30px rgba(20,36,84,.09);transform:rotate(2deg);position:relative;}
+.about-photo-frame:before{content:"";position:absolute;top:-12px;left:30%;width:92px;height:25px;background:#DCCEFF;opacity:.8;transform:rotate(-4deg);}
+.about-photo-frame img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
+.photo-note{position:absolute;right:-8px;top:25px;background:var(--pink);padding:8px 13px;border-radius:12px;transform:rotate(7deg);font:700 1rem "Caveat",cursive;color:var(--navy);box-shadow:0 8px 18px rgba(20,36,84,.07);}
+.photo-note small{display:block;font:500 .82rem Inter,sans-serif;color:#5E6A84;margin-top:2px;}
+.about-playground{display:block !important;}
+.about-quiz-box,.side-box,.experience-card,.other-work,.case-card,.process-detail,.toolbox{
+  background:rgba(255,255,255,.74) !important;border:1px solid rgba(205,197,245,.72) !important;
+  box-shadow:var(--card-shadow) !important;border-radius:26px !important;
+}
+.about-quiz-box{padding:28px !important;position:relative;overflow:hidden;}
+.about-quiz-box:before{content:"";position:absolute;inset:0;background:linear-gradient(130deg,rgba(255,220,235,.23),rgba(234,230,255,.18),rgba(221,245,234,.16));pointer-events:none;}
+.about-quiz-layout{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:stretch;}
+.about-quiz-intro{padding:8px 6px 8px 4px;display:flex;flex-direction:column;justify-content:center;}
+.about-quiz-intro h3{font-family:"Caveat",cursive;font-size:2.25rem;color:var(--navy);margin:10px 0 8px;}
+.about-quiz-intro p{color:#69758C;line-height:1.7;max-width:430px;}
+.quiz-start-btn{align-self:flex-start;margin-top:18px !important;background:var(--purple) !important;color:#fff !important;border:0 !important;padding:14px 22px !important;box-shadow:6px 7px 0 #D7CDFC;}
+.quiz-arrow-note{font:700 1.05rem "Caveat",cursive;color:var(--purple);margin:8px 0 0 140px;transform:rotate(-4deg);}
+.quiz-panel{background:linear-gradient(135deg,#F4F0FF,#FFF8FC 55%,#F5FFF9);border:1px solid #E2DAFF;border-radius:24px;padding:22px;position:relative;overflow:hidden;}
+.quiz-panel:after{content:"✦";position:absolute;right:18px;top:14px;font-size:2rem;color:#8E7FF9;opacity:.8;}
+.quiz-counter{display:inline-flex;background:#F0EBFF;border:1px solid #DAD0FF;border-radius:999px;padding:5px 11px;font-size:.74rem;font-weight:800;color:#6857DF;margin-bottom:12px;}
+.riya-option{background:rgba(255,255,255,.76) !important;border-radius:14px !important;padding:12px 15px !important;border:1px solid #DCDFF0 !important;}
+.riya-option:nth-child(1){background:#F1EDFF !important;border-color:#D8CEFF !important;}
+.riya-option:nth-child(2){background:#FFF0F6 !important;border-color:#F5CCD9 !important;}
+.riya-option:nth-child(3){background:#EAF8F1 !important;border-color:#BFE5D2 !important;}
+.riya-option:nth-child(4){background:#FFF4D8 !important;border-color:#F0D39A !important;}
+.riya-option:hover{transform:translateY(-2px) !important;}
+.riya-quiz-feedback{min-height:26px;font-size:.82rem !important;}
+.side-box{margin-top:24px;padding:30px !important;background:linear-gradient(135deg,rgba(247,243,255,.86),rgba(255,255,255,.84)) !important;}
+.side-box h3{font-family:"Caveat",cursive;font-size:2.1rem;color:var(--navy);}
+.riya-side-grid{grid-template-columns:repeat(4,1fr) !important;gap:14px !important;}
+.riya-side-card{min-height:196px !important;padding:20px !important;border-radius:20px !important;box-shadow:0 9px 18px rgba(20,36,84,.04);}
+.riya-side-card:nth-child(1){background:#FFF0F7 !important;border-color:#F5C6D9 !important;}
+.riya-side-card:nth-child(2){background:#EAF2FF !important;border-color:#C5D8F8 !important;}
+.riya-side-card:nth-child(3){background:#FFF4D9 !important;border-color:#F1D49B !important;}
+.riya-side-card:nth-child(4){background:#EAF8F1 !important;border-color:#BDE2D0 !important;}
+.riya-side-card strong{font-size:1rem !important;color:var(--navy);margin-top:8px;}
+.riya-side-card small{font-size:.8rem !important;line-height:1.55;margin-top:6px !important;color:#64708A !important;}
+.side-emoji{width:48px;height:48px;display:flex !important;align-items:center;justify-content:center;border-radius:50%;font-size:1.35rem !important;background:rgba(255,255,255,.58);}
+.side-reveal{background:#EEE9FF !important;color:#5648BD !important;border:1px solid #D8CEFF;}
+.random-fact-wrap{justify-content:center !important;}
+.fact-button{background:#FFFFFF !important;color:var(--purple) !important;border:1px solid #DAD2FF !important;box-shadow:none !important;font-family:Inter,sans-serif !important;}
+.random-fact{background:linear-gradient(90deg,#F3EEFF,#FFF3F8) !important;border:1px solid #E3DAFF !important;color:var(--navy) !important;}
+
+/* Experience + projects + cases: one page, many pastel cards */
+.experience-card{background:linear-gradient(135deg,#FFF0F6,#F7F1FF) !important;border-color:#F0CFE2 !important;}
+.experience-pin{background:#E7DDFF !important;color:#6958F5;}
+.experience-tags span{background:#FFFFFFB8 !important;border:1px solid rgba(105,88,245,.13);}
+.other-work{background:rgba(255,255,255,.72) !important;}
+.other-work-grid{grid-template-columns:1fr 1fr !important;}
+.other-work-card{border:1px solid rgba(105,88,245,.10) !important;background:#FFF !important;}
+.other-work-card:nth-child(1){background:#FFF0F6 !important;border-color:#F3CADB !important;}
+.other-work-card:nth-child(2){background:#EAF2FF !important;border-color:#C7D9F8 !important;}
+.proj-card:nth-child(1){background:#FFF0F6 !important;border-color:#F2CADB !important;}
+.proj-card:nth-child(2){background:#EAF2FF !important;border-color:#C9DCF8 !important;}
+.proj-card:nth-child(3){background:#FFF3DA !important;border-color:#F0D7A3 !important;}
+.proj-card:nth-child(4){background:#EAF8F1 !important;border-color:#BEE5D1 !important;}
+.proj-tag{background:rgba(255,255,255,.65) !important;color:var(--navy) !important;}
+.case-grid .case-card:nth-child(1){background:#FFF0F6 !important;border-color:#F0C7D8 !important;}
+.case-grid .case-card:nth-child(2){background:#EAF2FF !important;border-color:#C7D9F8 !important;}
+.case-grid .case-card:nth-child(3){background:#FFF3DA !important;border-color:#F0D7A3 !important;}
+.case-section.learning{background:rgba(255,255,255,.62) !important;border:1px solid rgba(105,88,245,.08);}
+
+/* Social flip cards: pastel fronts + pastel backs, not dark */
+.social-flip-grid{gap:18px !important;}
+.flip-front,.flip-back{border-radius:22px !important;box-shadow:0 12px 26px rgba(20,36,84,.06) !important;}
+.flip-card:nth-child(1) .flip-front{background:#FFF0F7 !important;border-color:#F3C7D9 !important;}
+.flip-card:nth-child(2) .flip-front{background:#EAF2FF !important;border-color:#C7D9F8 !important;}
+.flip-card:nth-child(3) .flip-front{background:#FFF0F0 !important;border-color:#F0CACA !important;}
+.flip-card:nth-child(4) .flip-front{background:#EAF8F1 !important;border-color:#BDE2D0 !important;}
+.flip-card:nth-child(5) .flip-front{background:#FFF4DA !important;border-color:#F0D59F !important;}
+.flip-card:nth-child(1) .flip-back{background:linear-gradient(145deg,#FFF0F7,#FFE4EF) !important;color:var(--navy) !important;border-color:#F3C7D9 !important;}
+.flip-card:nth-child(2) .flip-back{background:linear-gradient(145deg,#EAF2FF,#DDEAFF) !important;color:var(--navy) !important;border-color:#C7D9F8 !important;}
+.flip-card:nth-child(3) .flip-back{background:linear-gradient(145deg,#FFF0F0,#FFE3E3) !important;color:var(--navy) !important;border-color:#F0CACA !important;}
+.flip-card:nth-child(4) .flip-back{background:linear-gradient(145deg,#EAF8F1,#DDF5EA) !important;color:var(--navy) !important;border-color:#BDE2D0 !important;}
+.flip-card:nth-child(5) .flip-back{background:linear-gradient(145deg,#FFF4DA,#FFEDC2) !important;color:var(--navy) !important;border-color:#F0D59F !important;}
+.flip-back .back-label{color:var(--navy) !important;font-family:"Caveat",cursive;font-size:1.35rem !important;text-transform:none;letter-spacing:0;margin-bottom:14px;}
+.flip-back li{color:#44516B !important;}
+.flip-back li:before{color:var(--purple) !important;}
+.flip-front:before{content:"";position:absolute;top:-3px;left:50%;width:76px;height:18px;transform:translateX(-50%) rotate(-2deg);background:#E4D8FF;opacity:.8;border-radius:2px;}
+.flip-card:nth-child(2) .flip-front:before{background:#BFD7FF}.flip-card:nth-child(3) .flip-front:before{background:#FFBFC7}.flip-card:nth-child(4) .flip-front:before{background:#BFE7D2}.flip-card:nth-child(5) .flip-front:before{background:#F9DDA6}
+.platform-logo{box-shadow:0 8px 18px rgba(20,36,84,.06);}
+
+/* Process — screenshot-inspired paper + 2-column pastel cards */
+.process-section .wrap{max-width:1220px;}
+.process-intro{display:grid;grid-template-columns:1fr 1.15fr .7fr;gap:20px;align-items:start;margin:18px 0 30px;}
+.process-note-card{padding:22px 24px;border-radius:20px;background:#FFF0F6;border:1px solid #F4CADC;transform:rotate(-1.2deg);box-shadow:0 10px 24px rgba(20,36,84,.05);font-family:"Caveat",cursive;font-size:1.55rem;line-height:1.35;color:var(--navy);}
+.process-middle{padding:6px 8px;color:#55627C;line-height:1.8;font-size:.92rem;}
+.process-side-note{padding:20px;border-left:2px solid #D7CCFA;color:#53607A;line-height:1.8;background:rgba(255,255,255,.44);font-family:"Caveat",cursive;font-size:1.25rem;}
+.process-side-note b{display:block;font-family:Inter,sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:#6958F5;margin-bottom:8px;}
+.process-story,.process-track{overflow:visible !important;padding:0 !important;margin:0 !important;}
+.process-story{display:none;}
+.process-track{display:grid !important;grid-template-columns:1fr 1fr !important;gap:14px 20px !important;}
+.process-phase{display:contents;}
+.process-phase .phase-label{display:none;}
+.process-step{
+  min-height:128px;margin:0 !important;padding:20px 22px !important;border-radius:20px !important;
+  border:1px solid transparent !important;display:grid !important;grid-template-columns:52px 1fr auto !important;align-items:start;gap:10px !important;
+  background:#FFF !important;box-shadow:0 9px 22px rgba(20,36,84,.045);transition:transform .2s,box-shadow .2s;
+}
+.process-step span{grid-row:1/3 !important;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;background:#EDE7FF;}
+.process-step b{font-family:"Caveat",cursive !important;font-size:1.55rem !important;color:var(--navy) !important;}
+.process-step small{font-size:.76rem !important;color:#68748C !important;line-height:1.5;}
+.process-step:after{content:"↗";color:#7464D9;font:700 1.25rem "Caveat",cursive;align-self:center;}
+.process-step:nth-child(1){background:#FFF0F6 !important;border-color:#F2C9DB !important}.process-step:nth-child(1) span{background:#FFD9E8}
+.process-step:nth-child(2){background:#EAF2FF !important;border-color:#C9DCF8 !important}.process-step:nth-child(2) span{background:#D4E4FF}
+.process-step:nth-child(3){background:#EAF8F1 !important;border-color:#BDE3D1 !important}.process-step:nth-child(3) span{background:#CDEEDF}
+.process-step:nth-child(4){background:#FFF4DA !important;border-color:#F0D5A0 !important}.process-step:nth-child(4) span{background:#FFE5B4}
+.process-step:nth-child(5){background:#ECE8FF !important;border-color:#D0C6FA !important}.process-step:nth-child(5) span{background:#DCD4FF}
+.process-step:nth-child(6){background:#FFF0F6 !important;border-color:#F2C9DB !important}.process-step:nth-child(6) span{background:#FFD9E8}
+.process-step:nth-child(7){background:#FFF4DA !important;border-color:#F0D5A0 !important}.process-step:nth-child(7) span{background:#FFE5B4}
+.process-step:nth-child(8){background:#EAF8F1 !important;border-color:#BDE3D1 !important}.process-step:nth-child(8) span{background:#CDEEDF}
+.process-step:nth-child(9){background:#ECE8FF !important;border-color:#D0C6FA !important}.process-step:nth-child(9) span{background:#DCD4FF}
+.process-step:nth-child(10){background:#FFF0F6 !important;border-color:#F2C9DB !important}.process-step:nth-child(10) span{background:#FFD9E8}
+.process-step:hover{transform:translateY(-3px) !important;box-shadow:0 13px 26px rgba(20,36,84,.08);}
+.process-step.selected{outline:2px solid rgba(105,88,245,.18);}
+.process-detail{margin-top:16px;background:linear-gradient(90deg,#EEE9FF,#FFF0F7) !important;border-color:#D9D0FF !important;font-family:"Caveat",cursive;font-size:1.18rem !important;color:#4D5A74 !important;text-align:center;}
+.process-footer-note{font-family:"Caveat",cursive;text-align:center;font-size:1.45rem;color:var(--navy);margin:26px auto 0;background:#EEE9FF;padding:12px 20px;border-radius:999px;max-width:620px;}
+
+/* Skills — soft paper + colourful skill zones */
+.skills-zones{grid-template-columns:repeat(3,1fr) !important;gap:18px !important;}
+.skill-zone{border-radius:24px !important;box-shadow:0 10px 24px rgba(20,36,84,.05);}
+.skill-zone:nth-child(1){background:#FFF0F6 !important;border-color:#F2C9DB !important;}
+.skill-zone:nth-child(2){background:#EAF2FF !important;border-color:#C8DCF8 !important;}
+.skill-zone:nth-child(3){background:#EAF8F1 !important;border-color:#BDE3D1 !important;}
+.zone-icon{background:rgba(255,255,255,.58) !important;color:var(--purple);}
+.orbit-pills span{background:rgba(255,255,255,.72) !important;border-color:rgba(105,88,245,.10) !important;}
+.content-flow span{background:rgba(255,255,255,.72) !important;}
+.dashboard-tags span{background:rgba(255,255,255,.72) !important;}
+.fake-chart span{background:linear-gradient(to top,#8F7CF5,#D7CEFF) !important;}
+
+/* Tools */
+.toolbox{background:rgba(255,255,255,.76) !important;}
+.tool-category-tabs{justify-content:center;}
+.tool-tab{background:#F0ECFF !important;color:#5E50C9 !important;border-color:#D7CFFF !important;}
+.tool-tab.active{background:var(--purple) !important;color:#fff !important;border-color:var(--purple) !important;}
+.tool-item:nth-child(3n+1){background:#FFF0F6 !important;border-color:#F3CBDC !important;}
+.tool-item:nth-child(3n+2){background:#EAF2FF !important;border-color:#C7D9F8 !important;}
+.tool-item:nth-child(3n){background:#EAF8F1 !important;border-color:#BDE2D0 !important;}
+.tool-item>span{background:rgba(255,255,255,.7) !important;}
+
+/* Contact is intentionally kept structurally the same; only page palette flows through */
+#contact .contact-card{background:rgba(255,255,255,.84) !important;}
+
+@media(max-width:980px){
+  .about-head{grid-template-columns:1fr;}.about-photo-wrap{justify-content:flex-start;}.riya-side-grid{grid-template-columns:1fr 1fr !important;}
+  .process-intro{grid-template-columns:1fr;}.process-track{grid-template-columns:1fr !important;}.skills-zones{grid-template-columns:1fr !important;}
+  .social-flip-grid{grid-template-columns:repeat(2,1fr) !important;}
+}
+@media(max-width:640px){
+  h2.sec-title{font-size:3rem !important;}.cute-section .wrap:after,#projects .wrap:after{display:none;}
+  .about-quiz-layout{grid-template-columns:1fr;}.riya-side-grid{grid-template-columns:1fr !important;}.other-work-grid{grid-template-columns:1fr !important;}
+  .social-flip-grid{grid-template-columns:1fr !important;}.flip-card{height:310px;}.process-step{grid-template-columns:44px 1fr !important;}.process-step:after{display:none;}
+  .process-note-card{font-size:1.35rem;}.photo-note{right:0;}
+}
+
+
+
+  /* Seamless pastel canvas: keep the cute card colours, but remove section-by-section background bands. */
+  html, body{
+    background:
+      radial-gradient(circle at 12% 8%, rgba(255,214,229,.22), transparent 22%),
+      radial-gradient(circle at 88% 12%, rgba(219,210,255,.22), transparent 23%),
+      radial-gradient(circle at 50% 92%, rgba(214,239,230,.14), transparent 24%),
+      #FBFAFF;
+  }
+  section,
+  #about.cute-section,
+  #experience.cute-section,
+  #social-work.cute-section,
+  #projects,
+  #case-studies.cute-section,
+  #process.process-section,
+  #skills.cute-section,
+  #tools.cute-section,
+  #contact{
+    background: transparent !important;
+  }
+
+  /* Let the scrapbook-style pastel cards carry the colour, like the reference design. */
+  .wrap{position:relative;}
+  section{position:relative;}
+
+  /* Soft continuity between sections without visible colour blocks. */
+  section + section{border-top:0 !important;}
+
+  /* Keep Contact visually part of the same page while preserving its existing content/layout. */
+  #contact{background:transparent !important;}
+
+/* === FINAL REQUESTED POLISH === */
+:root{
+  --navy:#142454;
+  --purple:#6958F5;
+  --purple-pale:#EEE9FF;
+}
+
+/* Continuous pastel canvas across the whole page. */
+html,body{
+  min-height:100%;
+  background:
+    radial-gradient(circle at 8% 6%, rgba(255,214,232,.58), transparent 24%),
+    radial-gradient(circle at 92% 10%, rgba(221,214,255,.58), transparent 26%),
+    radial-gradient(circle at 82% 52%, rgba(215,237,255,.34), transparent 24%),
+    radial-gradient(circle at 18% 72%, rgba(227,248,239,.28), transparent 24%),
+    linear-gradient(180deg,#FBF7FF 0%,#F8F4FF 35%,#FFF9FC 68%,#F4FAFF 100%) !important;
+  background-attachment:fixed;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0));
+}
+section,#contact,.cute-section,.process-section{background:transparent !important;}
+footer{background:transparent !important;}
+
+/* Clean navbar order + dropdown. */
+.navlinks{gap:4px;align-items:center;}
+.navlinks a,.nav-dropbtn{white-space:nowrap;}
+.nav-dropdown{position:relative;display:flex;align-items:center;}
+.nav-dropbtn{
+  border:0;background:transparent;color:var(--muted);font:500 .92rem Inter,sans-serif;
+  padding:9px 16px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;
+  transition:.2s;
+}
+.nav-dropbtn:hover,.nav-dropdown.open .nav-dropbtn{color:var(--ink);background:var(--indigo-pale);}
+.nav-caret{font-size:1rem;line-height:1;transition:transform .2s;}
+.nav-dropdown.open .nav-caret{transform:rotate(180deg);}
+.nav-dropdown-menu{
+  position:absolute;right:0;top:calc(100% + 10px);min-width:230px;padding:8px;
+  background:rgba(255,255,255,.97);border:1px solid #DDD7F2;border-radius:18px;
+  box-shadow:0 18px 35px rgba(62,53,120,.13);display:none;z-index:100;
+}
+.nav-dropdown.open .nav-dropdown-menu{display:block;animation:menuIn .18s ease;}
+.nav-dropdown-menu a{display:block;padding:10px 12px;border-radius:12px;font-size:.84rem;color:#4E5870;}
+.nav-dropdown-menu a:hover{background:#F1ECFF;color:#5E50C9;}
+@keyframes menuIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.navlinks{display:none;}}
+
+/* About mini quiz button: visible pastel button with strong contrast. */
+.quiz-start-btn{
+  align-self:flex-start !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:150px !important;
+  margin-top:18px !important;
+  padding:13px 22px !important;
+  background:linear-gradient(135deg,#7C68F8,#6958F5) !important;
+  color:#fff !important;
+  border:1px solid #5B4BE4 !important;
+  border-radius:999px !important;
+  box-shadow:6px 7px 0 #D7CDFC !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+}
+.quiz-start-btn:hover{background:linear-gradient(135deg,#6958F5,#5B4BE4) !important;transform:translateY(-2px);}
+
+/* Real-looking platform logo marks, embedded so they do not depend on an external CDN. */
+.platform-logo svg{width:44px;height:44px;display:block;}
+.instagram-logo svg{fill:none;stroke:#E4405F;stroke-width:1.9;}
+.instagram-logo svg .dot{fill:#E4405F;stroke:none;}
+.facebook-logo svg{fill:#1877F2;}
+.youtube-logo svg{width:48px;height:36px;}
+.youtube-logo svg > path:first-child{fill:#FF0000;}
+.youtube-logo svg .play{fill:#fff;}
+.linkedin-logo svg{fill:#0A66C2;}
+.gmb-logo svg{width:48px;height:48px;}
+.gmb-logo svg .roof,.gmb-logo svg .door{fill:#4285F4;}
+.gmb-logo svg .door{fill:#fff;}
+.gmb-logo svg .g-letter{fill:#34A853;opacity:.95;}
+
+/* Tools: make all tabs visible and keep the toolbox clean and centered. */
+.toolbox{background:rgba(255,255,255,.76) !important;border-color:#DCD4F5 !important;}
+.tool-category-tabs{width:100%;display:flex !important;justify-content:center !important;align-items:center;gap:12px !important;flex-wrap:wrap !important;overflow:visible !important;}
+.tool-tab{display:inline-flex !important;align-items:center;justify-content:center;white-space:nowrap !important;min-height:46px;padding:11px 16px !important;}
+.tool-shelf.active{width:100%;display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;}
+.tool-item{min-width:0;}
+@media(max-width:760px){.tool-shelf.active{grid-template-columns:1fr 1fr !important;}}
+@media(max-width:560px){.tool-shelf.active{grid-template-columns:1fr !important;}.tool-category-tabs{justify-content:flex-start !important;}}
+
+/* Cute contact buttons: no phone number displayed; click goes to WhatsApp. */
+.contact-section-cute{padding-bottom:95px;}
+.contact-note{max-width:650px;margin-top:-26px;margin-bottom:28px;}
+.contact-buttons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.contact-action{
+  position:relative;min-height:150px;padding:20px;border-radius:24px;border:1px solid #DDD7EE;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;overflow:hidden;
+  box-shadow:0 12px 28px rgba(42,34,90,.06);transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.contact-action:after{content:"";position:absolute;top:-8px;left:50%;width:70px;height:18px;transform:translateX(-50%) rotate(-2deg);background:#E5DBFF;border-radius:2px;opacity:.8;}
+.contact-action:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 18px 34px rgba(42,34,90,.11);}
+.contact-action.whatsapp{background:#EEF9F2;border-color:#CFE7D7;}
+.contact-action.email{background:#FFF2F7;border-color:#F0D4E0;}
+.contact-action.linkedin{background:#EDF6FF;border-color:#D0E3F5;}
+.contact-action.location{background:#FFF8E8;border-color:#F1DFB8;cursor:default;}
+.contact-action-icon{width:50px;height:50px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.72);font-weight:800;font-size:1.35rem;color:#5C54C8;margin-bottom:16px;}
+.contact-action.whatsapp .contact-action-icon{color:#1C9B52;}.contact-action.email .contact-action-icon{color:#C15D83;}.contact-action.linkedin .contact-action-icon{color:#0A66C2;}.contact-action.location .contact-action-icon{color:#A87931;}
+.contact-action-main b{display:block;color:#142454;font-size:1rem;margin-bottom:3px;}
+.contact-action-main small{display:block;color:#677089;font-size:.78rem;line-height:1.45;}
+.contact-action-arrow{margin-top:auto;align-self:flex-end;font-size:1.05rem;font-weight:800;color:#6B5DCB;}
+.contact-bottom-row{display:block;margin-top:24px;width:100%;}
+.contact-hand-note{font-family:Caveat,cursive;font-size:1.35rem;color:#5F548F;padding:8px 8px 16px;text-align:center;transform:rotate(-1deg);}
+.contact-mini-form{width:100%;background:rgba(255,255,255,.82);border:1px solid #DDD7EE;border-radius:24px;padding:28px;box-shadow:0 12px 28px rgba(42,34,90,.05);}
+.contact-mini-title{font-family:Caveat,cursive;font-size:1.55rem;color:#142454;margin-bottom:14px;}
+#contact .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;}
+#contact .field input,#contact .field textarea{background:rgba(250,248,255,.9);width:100%;}
+@media(max-width:700px){
+  .contact-buttons-grid{grid-template-columns:1fr;}
+  #contact .form-grid{grid-template-columns:1fr;}
+  .contact-action{min-height:132px;}
+}
+
+
+/* Interaction fixes: keep the approved layout/colours while making all interactive pieces usable. */
+.riya-option{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;}
+.riya-option.correct{border-color:#5CC38B !important;box-shadow:0 0 0 2px rgba(92,195,139,.12);}
+.riya-option.wrong{border-color:#E98A9B !important;box-shadow:0 0 0 2px rgba(233,138,155,.10);}
+.riya-option:disabled{cursor:default;opacity:.95;}
+#riyaQuizOptions{margin-top:6px;}
+#riyaNextBtn[disabled]{opacity:.5;cursor:not-allowed;}
+
+</style>
+<style>
+
+/* ===== Final scrapbook-style consistency polish ===== */
+/* This layer changes only the visual treatment of the remaining sections.
+   Existing layout, copy, interactions, colours and functionality stay intact. */
+.experience-card,.other-work,.proj-card,.case-card,.skill-zone,.toolbox,.contact-action{position:relative;}
+
+/* Handwritten titles across the sections that previously felt more basic. */
+#experience .experience-card h3,
+#experience .other-work h3,
+#projects .proj-card h3,
+#case-studies .case-card h3,
+#skills .skill-zone h3,
+#tools .tool-item b,
+#contact .contact-action-main b{
+  font-family:"Caveat","Segoe Print",cursive !important;
+  color:var(--navy) !important;
+}
+#experience .experience-card h3,
+#experience .other-work h3,
+#projects .proj-card h3,
+#case-studies .case-card h3{font-size:1.55rem !important;letter-spacing:.01em;}
+#skills .skill-zone h3{font-size:1.45rem !important;}
+#tools .tool-item b{font-size:1.2rem !important;}
+#contact .contact-action-main b{font-size:1.35rem !important;}
+
+/* Little paper-tape details, matching the reference scrapbook cards. */
+#experience .experience-card:before,
+#experience .other-work:before,
+#projects .proj-card:before,
+#case-studies .case-card:before,
+#skills .skill-zone:before,
+#tools .toolbox:before{
+  content:"";position:absolute;top:-9px;left:50%;width:78px;height:19px;
+  transform:translateX(-50%) rotate(-2deg);border-radius:2px;opacity:.82;
+  background:#DCCEFF;pointer-events:none;
+}
+#experience .experience-card:before{background:#CDE9DA;}
+#experience .other-work:before{background:#FFD5B8;}
+#projects .proj-card:nth-child(2):before{background:#C7D9FF;}
+#projects .proj-card:nth-child(3):before{background:#FFE1A9;}
+#projects .proj-card:nth-child(4):before{background:#BFE7D4;}
+#case-studies .case-card:nth-child(2):before{background:#C7D9FF;}
+#case-studies .case-card:nth-child(3):before{background:#FFE1A9;}
+#skills .skill-zone:nth-child(2):before{background:#C7D9FF;}
+#skills .skill-zone:nth-child(3):before{background:#BFE7D4;}
+#tools .toolbox:before{background:#F6D7A5;}
+
+/* Tiny handwritten/doodle marks so each section shares the same visual language. */
+#experience .experience-card:after,
+#experience .other-work:after,
+#projects .proj-card:after,
+#case-studies .case-card:after,
+#skills .skill-zone:after,
+#tools .toolbox:after,
+#contact .wrap:after{
+  position:absolute;font-family:"Caveat",cursive;color:#6F63B5;opacity:.78;pointer-events:none;
+}
+#experience .experience-card:after{content:"♡";right:18px;bottom:12px;font-size:1.4rem;transform:rotate(9deg);}
+#experience .other-work:after{content:"✦";right:18px;top:14px;font-size:1.2rem;transform:rotate(-8deg);}
+#projects .proj-card:after{content:"♡";right:18px;top:12px;font-size:1.25rem;transform:rotate(8deg);}
+#case-studies .case-card:after{content:"✦";right:18px;bottom:12px;font-size:1.15rem;transform:rotate(-8deg);}
+#skills .skill-zone:after{content:"✦";right:17px;top:14px;font-size:1.15rem;transform:rotate(6deg);}
+#tools .toolbox:after{content:"↗";right:20px;bottom:14px;font-size:1.35rem;transform:rotate(-7deg);}
+#contact .wrap:after{content:"Let's connect ♡";right:14px;top:4px;font-size:1.35rem;transform:rotate(-4deg);}
+
+/* A slightly more scrapbook-like feel on the project/case labels, without changing their palette. */
+#projects .proj-tag,
+#case-studies .proj-tag{
+  font-family:"Caveat",cursive !important;
+  font-size:1.02rem !important;
+  letter-spacing:.01em !important;
+  padding:5px 13px !important;
+}
+
+/* Keep all new decorative marks behind the readable content. */
+#experience .experience-card > *,
+#experience .other-work > *,
+#projects .proj-card > *,
+#case-studies .case-card > *,
+#skills .skill-zone > *,
+#tools .toolbox > *,
+#contact .wrap > *{position:relative;z-index:1;}
+
+@media(max-width:760px){
+  #contact .wrap:after{display:none;}
+}
 </style>
 </head>
 <body>
@@ -232,12 +942,20 @@
     <div class="brand"><div class="brand-avatar">R</div>Riya.</div>
     <div class="navlinks">
       <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
+      <a href="#about">About Me</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#tools">Tools</a>
-      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropbtn" type="button" aria-expanded="false" aria-haspopup="true">Social Media Work <span class="nav-caret">⌄</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="#social-work">Social Media Work</a>
+          <a href="#projects">Selected Work</a>
+          <a href="#case-studies">Case Studies</a>
+          <a href="#process">Content Creation Process</a>
+        </div>
+      </div>
     </div>
     <div class="theme-toggle">☾</div>
   </div>
@@ -252,6 +970,7 @@
       <div class="role-pills">
         <span class="role-pill a">Digital Marketing Executive</span>
         <span class="role-pill b">Social Media Executive</span>
+        <span class="role-pill a">Content Creator</span>
       </div>
       <p class="hero-desc">I help businesses grow through <b>Digital Marketing</b>, <b>Social Media Management</b>, <b>Local SEO</b>, <b>Website Management</b>, and <b>Data-Driven Marketing Strategies</b>.</p>
       <div class="hero-cta">
@@ -261,7 +980,7 @@
       </div>
       <div class="stats-row">
         <div class="stat"><b>1Y</b><span>Digital Marketing Experience</span></div>
-        <div class="stat"><b>BBA</b><span>Digital Marketing</span></div>
+        <div class="stat"><b>MBA</b><span>MBA</span></div>
         <div class="stat"><b>15+</b><span>Marketing Tools</span></div>
       </div>
     </div>
@@ -279,334 +998,3 @@
         </div>
       </div>
     </div>
-  </div>
-</header>
-
-<section id="about">
-  <div class="wrap">
-    <div class="eyebrow">About</div>
-    <h2 class="sec-title">Get to know <span class="accent">me</span></h2>
-    <div class="about-grid">
-      <div>
-        <p>I'm a <b>Digital Marketing & SEO Executive</b> with 1 year of hands-on experience in SEO, social media management, content, and website management.</p>
-        <p>I have managed multiple client accounts and digital platforms, working across SEO strategies, keyword research, Google Business Profile optimization, social media management, content publishing, and website management.</p>
-        <p>My experience includes handling day-to-day digital marketing activities, monitoring performance, and implementing strategies focused on improving online visibility, organic growth, and overall digital presence.</p>
-        <p>I also run <b>Exclusive Gifts</b>, an affiliate-based gifting brand, and take on freelance design projects using Canva.</p>
-      </div>
-      <div class="about-highlights">
-        <div class="hi-card"><div class="ic">🎯</div><h4>Local SEO</h4><p>Google Business Profile & keyword research</p></div>
-        <div class="hi-card"><div class="ic">📱</div><h4>Social Media</h4><p>Content strategy & growth management</p></div>
-        <div class="hi-card"><div class="ic">🌐</div><h4>Website Mgmt</h4><p>WordPress & Wix management</p></div>
-        <div class="hi-card"><div class="ic">📊</div><h4>Analytics</h4><p>Performance reporting & Google Analytics</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="quiz">
-  <div class="wrap">
-    <div class="eyebrow">Quick Knowledge Check</div>
-    <h2 class="sec-title">Test my <span class="accent">SEO knowledge</span></h2>
-    <p class="quiz-intro">Not just a resume line — here's SEO applied. A fresh set of 6 questions every time you load this page — click an answer and see if you'd hire me.</p>
-
-    <div class="quiz-score-bar">
-      <div><span class="label">Your score: </span><span class="score" id="quizScore">0 / 6</span></div>
-      <button class="quiz-reset" onclick="renderQuiz()">↺ New Set of Questions</button>
-    </div>
-
-    <div id="quizContainer"></div>
-  </div>
-</section>
-
-<script>
-  const QUIZ_BANK = [
-    { q:"What does SEO stand for?", correct:"Search Engine Optimization", wrong:["Site Engagement Overview","Social Engine Outreach","Search Experience Output"], explain:"SEO is the practice of improving a website's visibility in unpaid, organic search results." },
-    { q:"Which of these is an on-page SEO factor?", correct:"Meta titles & descriptions", wrong:["Backlinks from other websites","Social media shares","Domain age"], explain:"On-page SEO covers everything you control directly on your site — titles, meta tags, content, internal links. Backlinks and shares are off-page signals." },
-    { q:"What's the main purpose of keyword research?", correct:"To find what your audience is actually searching for", wrong:["To copy competitor content","To increase page word count","To pick website colors"], explain:"Keyword research reveals real search demand and intent, so content actually matches what people are looking for — not just guesses." },
-    { q:"For Google Business Profile, what most improves local ranking?", correct:"Consistent NAP (Name, Address, Phone) + active reviews", wrong:["Instagram follower count","Website page speed alone","Number of blog posts"], explain:"Local ranking depends on proximity, relevance, and prominence — accurate NAP details and regularly earned reviews build that prominence." },
-    { q:"What's a backlink?", correct:"A link from another website pointing back to yours", wrong:["A link from your site to another site","A broken link on a page","An internal navigation link"], explain:"Backlinks act as \"votes of trust\" from other sites and are a key off-page SEO ranking signal." },
-    { q:"Which metric best shows a blog is actually working for SEO?", correct:"Organic traffic & keyword rankings over time", wrong:["Total word count","Font size used","Number of images"], explain:"Real SEO success shows up as growth in organic traffic and keyword rankings — not vanity stats like word count." },
-    { q:"What does 'alt text' on an image help with?", correct:"Describing the image for search engines & accessibility", wrong:["Making the image load faster","Changing the image's file size","Adding a watermark"], explain:"Alt text tells search engines (and screen readers) what an image shows, helping SEO and accessibility together." },
-    { q:"What is a meta description mainly used for?", correct:"A short summary shown in search results to improve click-through rate", wrong:["Ranking a page higher automatically", "Storing keywords invisibly", "Blocking search engines from a page"], explain:"A meta description doesn't directly boost rankings, but a compelling one improves CTR from the search results page." },
-    { q:"What's the difference between organic and paid search results?", correct:"Organic results are earned through relevance; paid results are ads you pay for", wrong:["Organic results only show images", "Paid results rank higher forever", "There is no difference"], explain:"Organic rankings come from SEO relevance and authority, while paid results appear because of ad spend." },
-    { q:"What is a sitemap used for?", correct:"Helping search engines discover and crawl all pages on a site", wrong:["Designing the website's layout", "Tracking website visitors", "Storing customer reviews"], explain:"A sitemap (usually sitemap.xml) lists a site's URLs so search engines can find and index pages efficiently." },
-    { q:"What does 'mobile-first indexing' mean for Google?", correct:"Google mainly uses the mobile version of a site to rank pages", wrong:["Only mobile users can find the site", "Desktop sites are ranked first", "It only applies to mobile apps"], explain:"Since most searches happen on mobile, Google predominantly crawls and ranks using the mobile version of your content." },
-    { q:"Why does page load speed matter for SEO?", correct:"It affects user experience and is a ranking factor", wrong:["It only affects image quality", "It has no impact on rankings", "It only matters for e-commerce sites"], explain:"Slow pages hurt user experience and conversions, and speed is a confirmed Google ranking signal." },
-    { q:"What is anchor text?", correct:"The clickable, visible text of a hyperlink", wrong:["The title of a webpage", "A page's URL structure", "Text hidden from users"], explain:"Anchor text is the visible, clickable words in a link — its relevance helps search engines understand what the linked page is about." },
-    { q:"What's the point of competitor analysis in SEO/social media?", correct:"To find content gaps and opportunities you can capture", wrong:["To copy their content exactly", "To report them to Google", "It has no real use"], explain:"Competitor analysis reveals what's working for others and where gaps exist — opportunities you can target with better content." },
-    { q:"What is 'bounce rate' a sign of?", correct:"How many visitors leave after viewing just one page", wrong:["How fast a website loads", "Number of backlinks a page has", "How many ads are on a page"], explain:"A high bounce rate can signal that content, relevance, or user experience isn't matching what visitors expected." },
-    { q:"What's the main goal of a WhatsApp/email marketing campaign?", correct:"Direct, personalized engagement with an existing audience", wrong:["Improving a website's backlink profile", "Ranking higher on Google", "Replacing social media entirely"], explain:"Unlike SEO/social reach, campaigns like WhatsApp or email speak directly and personally to people who already know the brand." },
-    { q:"What does CTR (Click-Through Rate) measure?", correct:"The percentage of people who click a link after seeing it", wrong:["How long a video is watched", "The number of followers gained", "Website loading speed"], explain:"CTR = clicks ÷ impressions — a key metric for judging how compelling a title, ad, or thumbnail is." },
-    { q:"Why is internal linking important for a website?", correct:"It helps distribute page authority and helps users/search engines navigate", wrong:["It's only for design purposes", "It slows down the website on purpose", "It has no SEO value"], explain:"Internal links pass authority between pages and help both users and search engines discover related content." }
-  ];
-
-  let quizCorrectCount = 0;
-  let quizTotal = 6;
-
-  function shuffle(arr){
-    const a = arr.slice();
-    for(let i = a.length - 1; i > 0; i--){
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
-
-  function renderQuiz(){
-    quizCorrectCount = 0;
-    document.getElementById('quizScore').textContent = '0 / ' + quizTotal;
-    const picks = shuffle(QUIZ_BANK).slice(0, quizTotal);
-    const container = document.getElementById('quizContainer');
-    container.innerHTML = '';
-    picks.forEach((item, i) => {
-      const options = shuffle([item.correct, ...item.wrong]);
-      const card = document.createElement('div');
-      card.className = 'quiz-card';
-      const optsHtml = options.map(opt =>
-        `<button class="quiz-opt" data-correct="${opt === item.correct ? 'true' : 'false'}" onclick="quizAnswer(this)">${opt}</button>`
-      ).join('');
-      card.innerHTML = `
-        <div class="quiz-q"><span class="quiz-qnum">${i + 1}</span>${item.q}</div>
-        <div class="quiz-options">${optsHtml}</div>
-        <div class="quiz-explain"><b>Why:</b> ${item.explain}</div>
-      `;
-      container.appendChild(card);
-    });
-  }
-
-  function quizAnswer(el){
-    const options = el.parentElement.querySelectorAll('.quiz-opt');
-    options.forEach(o => o.disabled = true);
-    const isCorrect = el.dataset.correct === "true";
-    if(isCorrect){
-      el.classList.add('correct');
-      quizCorrectCount++;
-    } else {
-      el.classList.add('wrong');
-      options.forEach(o => { if(o.dataset.correct === "true") o.classList.add('correct'); });
-    }
-    const explain = el.closest('.quiz-card').querySelector('.quiz-explain');
-    if(explain) explain.classList.add('show');
-    document.getElementById('quizScore').textContent = quizCorrectCount + ' / ' + quizTotal;
-  }
-
-  renderQuiz();
-</script>
-
-
-
-<section id="experience">
-  <div class="wrap">
-    <div class="eyebrow">Journey</div>
-    <h2 class="sec-title">Education & <span class="accent">Experience</span></h2>
-    <div class="exp-cols">
-      <div>
-        <div class="col-head"><span class="ic">🎓</span> Education</div>
-        <div class="card">
-          <div class="card-date">📅 Graduated</div>
-          <h3>BBA in Digital Marketing</h3>
-          <div class="org">Chitkara University · Rajpura, Punjab</div>
-          <p style="color:var(--muted);font-size:0.92rem;">Specialised curriculum spanning digital branding, campaign strategy, SEO, analytics, consumer behaviour and marketing management.</p>
-        </div>
-      </div>
-      <div>
-        <div class="col-head"><span class="ic">💼</span> Experience</div>
-        <div class="card">
-          <div class="card-top">
-            <div>
-              <h3>Digital Marketing Executive</h3>
-              <div class="org">Healthy Jeena Sikho</div>
-            </div>
-            <span class="status-pill">1 Year</span>
-          </div>
-          <div class="check-grid">
-            <div class="check-item"><span class="check-icon">✓</span>Social Media Management</div>
-            <div class="check-item"><span class="check-icon">✓</span>Google Business Profile Optimization</div>
-            <div class="check-item"><span class="check-icon">✓</span>Local SEO</div>
-            <div class="check-item"><span class="check-icon">✓</span>Website Management (WordPress & Wix)</div>
-            <div class="check-item"><span class="check-icon">✓</span>Content Planning</div>
-            <div class="check-item"><span class="check-icon">✓</span>Keyword Research</div>
-            <div class="check-item"><span class="check-icon">✓</span>Competitor Analysis</div>
-            <div class="check-item"><span class="check-icon">✓</span>Google Analytics</div>
-            <div class="check-item"><span class="check-icon">✓</span>Performance Reporting</div>
-            <div class="check-item"><span class="check-icon">✓</span>YouTube Studio Management</div>
-            <div class="check-item"><span class="check-icon">✓</span>Content Optimization</div>
-            <div class="check-item"><span class="check-icon">✓</span>Digital Branding</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="eyebrow">Skills</div>
-    <h2 class="sec-title">What I bring to the <span class="accent">table</span></h2>
-    <div class="skill-grid">
-      <div class="skill-card">
-        <div class="ic">🔍</div>
-        <h4>Search & SEO</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Local SEO</span>
-          <span class="skill-tag">Keyword Research</span>
-          <span class="skill-tag">Google Search Console</span>
-          <span class="skill-tag">JSON-LD Schema</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="ic">📣</div>
-        <h4>Social & Content</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Social Media Marketing</span>
-          <span class="skill-tag">Blog Writing</span>
-          <span class="skill-tag">WhatsApp Campaigns</span>
-          <span class="skill-tag">YouTube Content</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="ic">📈</div>
-        <h4>Analytics & Growth</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Google Analytics</span>
-          <span class="skill-tag">Performance Reporting</span>
-          <span class="skill-tag">Competitor Analysis</span>
-          <span class="skill-tag">Affiliate Marketing</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="tools">
-  <div class="wrap">
-    <div class="eyebrow">Tools</div>
-    <h2 class="sec-title">Software I <span class="accent">use</span></h2>
-    <div class="tools-grid">
-      <div class="tool-card"><div class="ic">W</div><h4>WordPress</h4></div>
-      <div class="tool-card"><div class="ic">Wx</div><h4>Wix</h4></div>
-      <div class="tool-card"><div class="ic">G</div><h4>Google Analytics</h4></div>
-      <div class="tool-card"><div class="ic">▶</div><h4>YouTube Studio</h4></div>
-      <div class="tool-card"><div class="ic">C</div><h4>Canva</h4></div>
-      <div class="tool-card"><div class="ic">✂</div><h4>CapCut / VN</h4></div>
-      <div class="tool-card"><div class="ic">GB</div><h4>Google Business Profile</h4></div>
-      <div class="tool-card"><div class="ic">AI</div><h4>ChatGPT / Claude</h4></div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap">
-    <div class="eyebrow">Projects</div>
-    <h2 class="sec-title">Selected <span class="accent">work</span></h2>
-    <div class="proj-grid">
-      <div class="proj-card">
-        <span class="proj-tag">SEO</span>
-        <h3>Category Blog Rewrites</h3>
-        <p>Full audits and SEO-optimized rewrites across wheelchair, oxygen concentrator, CPAP, and SpO2 blog categories, with JSON-LD schema markup.</p>
-      </div>
-      <div class="proj-card">
-        <span class="proj-tag">Social Media</span>
-        <h3>Instagram Growth Strategy</h3>
-        <p>Bio, content strategy, and highlight architecture rebuilt for a medical equipment brand, alongside 40+ produced short-form reels.</p>
-      </div>
-      <div class="proj-card">
-        <span class="proj-tag">Local SEO</span>
-        <h3>Google Business Profile</h3>
-        <p>Optimized listings and managed WhatsApp campaign cycles to improve local discovery and response rates.</p>
-      </div>
-      <div class="proj-card">
-        <span class="proj-tag">Brand</span>
-        <h3>Exclusive Gifts</h3>
-        <p>Founded and ran an affiliate-based gifting brand, handling design, product curation, and freelance client work via Canva.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="eyebrow">Contact</div>
-    <h2 class="sec-title">Let's build your next <span class="accent">growth story</span> together.</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="reach-label">Reach out to</div>
-        <div class="reach-name">Riya Barman</div>
-        <div class="contact-row">
-          <div class="ic">✉</div>
-          <div><div class="lbl">Email</div><div class="val">riyabarman1017@gmail.com</div></div>
-        </div>
-        <div class="contact-row">
-          <div class="ic">☎</div>
-          <div><div class="lbl">Phone</div><div class="val">+91 81689-28497</div></div>
-        </div>
-        <div class="contact-row">
-          <div class="ic">in</div>
-          <div><div class="lbl">LinkedIn</div><div class="val">linkedin.com/in/riya-barman-artist</div></div>
-        </div>
-        <div class="contact-row">
-          <div class="ic">📍</div>
-          <div><div class="lbl">Location</div><div class="val">Ambala, Haryana · Open to Mohali, Chandigarh, Panchkula</div></div>
-        </div>
-        <div class="looking-for">
-          <div class="lbl">Looking for</div>
-          <div class="role-pills">
-            <span class="role-pill a">Digital Marketing Executive</span>
-            <span class="role-pill b">Social Media Executive</span>
-          </div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <form id="contactForm" class="form-grid" action="https://formspree.io/f/xyeyrajw" method="POST">
-          <div class="field"><label>Your Name *</label><input type="text" name="name" required></div>
-          <div class="field"><label>Email *</label><input type="email" name="email" required></div>
-          <div class="field"><label>Company</label><input type="text" name="company"></div>
-          <div class="field"><label>Role Hiring For</label><input type="text" name="role"></div>
-          <div class="field full"><label>Job Location</label><input type="text" name="job_location" placeholder="Mohali / Chandigarh / Panchkula"></div>
-          <div class="field full"><label>Message *</label><textarea name="message" required placeholder="Tell me about the role or opportunity..."></textarea></div>
-          <input type="hidden" name="_subject" value="New portfolio message — Riya Barman">
-          <div class="field full form-submit"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">Send Message</button></div>
-          <div id="formStatus" class="field full" style="display:none;font-size:0.9rem;font-weight:600;"></div>
-        </form>
-        <script>
-          const contactForm = document.getElementById('contactForm');
-          const formStatus = document.getElementById('formStatus');
-          contactForm.addEventListener('submit', function(e){
-            e.preventDefault();
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            fetch(contactForm.action, {
-              method: 'POST',
-              body: new FormData(contactForm),
-              headers: { 'Accept': 'application/json' }
-            }).then(response => {
-              formStatus.style.display = 'block';
-              if(response.ok){
-                formStatus.style.color = '#15803D';
-                formStatus.textContent = "✓ Message sent — I'll get back to you soon!";
-                contactForm.reset();
-              } else {
-                formStatus.style.color = '#B91C1C';
-                formStatus.textContent = "Something went wrong. Please email me directly instead.";
-              }
-              submitBtn.disabled = false;
-              submitBtn.textContent = 'Send Message';
-            }).catch(() => {
-              formStatus.style.display = 'block';
-              formStatus.style.color = '#B91C1C';
-              formStatus.textContent = "Something went wrong. Please email me directly instead.";
-              submitBtn.disabled = false;
-              submitBtn.textContent = 'Send Message';
-            });
-          });
-        </script>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 Riya Barman. All rights reserved.</footer>
-
-</body>
-</html>
