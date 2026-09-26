@@ -303,7 +303,7 @@
   .dashboard-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.dashboard-tags span{font-size:.72rem;padding:6px 9px;border-radius:10px;background:var(--bg);border:1px solid var(--border);}
   .toolbox{padding:26px}.tool-category-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.tool-tab{border:1px solid var(--border);background:var(--bg);border-radius:999px;padding:11px 15px;font:700 .78rem Inter,sans-serif;cursor:pointer}.tool-tab.active,.tool-tab:hover{background:var(--indigo);color:#fff;border-color:var(--indigo);}
   .tool-shelf{display:none;grid-template-columns:repeat(3,1fr);gap:13px}.tool-shelf.active{display:grid;animation:shelfIn .35s ease}@keyframes shelfIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  .tool-item{border:1px solid var(--border);border-radius:17px;padding:17px;background:#FCFCFF;transition:.2s}.tool-item:hover{transform:translateY(-4px);box-shadow:0 9px 20px rgba(23,23,35,.06)}.tool-item>span{width:38px;height:38px;border-radius:12px;background:var(--indigo-pale);color:var(--indigo);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800;margin-bottom:9px}.tool-item b,.tool-item small{display:block}.tool-item b{font-size:.82rem}.tool-item small{font-size:.7rem;color:var(--muted);margin-top:4px}.tool-note{text-align:center;color:var(--muted);font-family:cursive;margin-top:20px;}
+  .tool-item{border:1px solid var(--border);border-radius:17px;padding:17px;background:#FCFCFF;transition:.2s}.tool-item:hover{transform:translateY(-4px);box-shadow:0 9px 20px rgba(23,23,35,.06)}.tool-item>span{margin-bottom:9px}.tool-logo{width:42px;height:42px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(108,99,255,.10)}.tool-logo img{width:24px;height:24px;object-fit:contain;display:block}.tool-fallback{display:none !important;width:100%;height:100%;align-items:center;justify-content:center;background:var(--indigo-pale);color:var(--indigo);font-size:.78rem;font-weight:800}.tool-item b,.tool-item small{display:block}.tool-item b{font-size:.82rem}.tool-item small{font-size:.7rem;color:var(--muted);margin-top:4px}.tool-note{text-align:center;color:var(--muted);font-family:cursive;margin-top:20px;}
   @media(max-width:1000px){.social-flip-grid{grid-template-columns:repeat(3,1fr)}.skills-zones{grid-template-columns:1fr 1fr}.case-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:760px){.about-playground{grid-template-columns:1fr}.social-flip-grid{grid-template-columns:1fr 1fr}.case-grid,.skills-zones{grid-template-columns:1fr}.tool-shelf.active{grid-template-columns:1fr 1fr}.doodle-note{display:none}}
   @media(max-width:560px){.riya-side-grid,.other-work-grid,.social-flip-grid,.tool-shelf.active{grid-template-columns:1fr}.flip-card{height:300px}.process-phase{min-width:220px}.process-story span{min-width:230px}.toolbox{padding:18px}}
@@ -1203,30 +1203,30 @@ footer{background:transparent !important;}
       </div>
 
       <div class="tool-shelf active" id="tool-marketing">
-        <div class="tool-item"><span>GB</span><b>Google Business Profile</b><small>Local visibility &amp; profile management</small></div>
-        <div class="tool-item"><span>G</span><b>Google Analytics</b><small>Website &amp; performance insights</small></div>
-        <div class="tool-item"><span>GS</span><b>Google Search Console</b><small>Search performance &amp; indexing checks</small></div>
-        <div class="tool-item"><span>GK</span><b>Google Keyword Planner</b><small>Keyword research</small></div>
-        <div class="tool-item"><span>SM</span><b>SEMrush</b><small>SEO &amp; competitor research</small></div>
-        <div class="tool-item"><span>U</span><b>Ubersuggest</b><small>Keyword &amp; SEO research</small></div>
-        <div class="tool-item"><span>AP</span><b>AnswerThePublic</b><small>Content &amp; search-question research</small></div>
-        <div class="tool-item"><span>W</span><b>WordPress</b><small>Website management</small></div>
-        <div class="tool-item"><span>Wx</span><b>Wix</b><small>Website management</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/googlebusinessprofile" alt="Google Business Profile logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">GB</span></span><b>Google Business Profile</b><small>Local visibility &amp; profile management</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/googleanalytics" alt="Google Analytics logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">G</span></span><b>Google Analytics</b><small>Website &amp; performance insights</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/googlesearchconsole" alt="Google Search Console logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">GS</span></span><b>Google Search Console</b><small>Search performance &amp; indexing checks</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/googleads" alt="Google Ads logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">GK</span></span><b>Google Keyword Planner</b><small>Keyword research</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/semrush" alt="SEMrush logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">SM</span></span><b>SEMrush</b><small>SEO &amp; competitor research</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/ubersuggest" alt="Ubersuggest logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">U</span></span><b>Ubersuggest</b><small>Keyword &amp; SEO research</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/answerthepublic" alt="AnswerThePublic logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">AP</span></span><b>AnswerThePublic</b><small>Content &amp; search-question research</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/wordpress" alt="WordPress logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">W</span></span><b>WordPress</b><small>Website management</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/wix" alt="Wix logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">Wx</span></span><b>Wix</b><small>Website management</small></div>
       </div>
 
       <div class="tool-shelf" id="tool-content">
-        <div class="tool-item"><span>C</span><b>Canva</b><small>Design &amp; content creation</small></div>
-        <div class="tool-item"><span>B</span><b>Buffer</b><small>Social scheduling</small></div>
-        <div class="tool-item"><span>M</span><b>Meta Business Suite</b><small>Meta content management &amp; insights</small></div>
-        <div class="tool-item"><span>✂</span><b>CapCut</b><small>Video editing</small></div>
-        <div class="tool-item"><span>✂</span><b>VN</b><small>Video editing</small></div>
-        <div class="tool-item"><span>▶</span><b>YouTube Studio</b><small>Channel management &amp; analytics</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/canva" alt="Canva logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">C</span></span><b>Canva</b><small>Design &amp; content creation</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/buffer" alt="Buffer logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">B</span></span><b>Buffer</b><small>Social scheduling</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/meta" alt="Meta logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">M</span></span><b>Meta Business Suite</b><small>Meta content management &amp; insights</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/capcut" alt="CapCut logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">CC</span></span><b>CapCut</b><small>Video editing</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/vn" alt="VN logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">VN</span></span><b>VN</b><small>Video editing</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/youtubestudio" alt="YouTube Studio logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">▶</span></span><b>YouTube Studio</b><small>Channel management &amp; analytics</small></div>
       </div>
 
       <div class="tool-shelf" id="tool-ai">
-        <div class="tool-item"><span>AI</span><b>ChatGPT</b><small>Idea development &amp; content assistance</small></div>
-        <div class="tool-item"><span>AI</span><b>Claude</b><small>Draft refinement &amp; content assistance</small></div>
-        <div class="tool-item"><span>AI</span><b>Gemini</b><small>Research &amp; idea assistance</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/chatgpt" alt="ChatGPT logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">AI</span></span><b>ChatGPT</b><small>Idea development &amp; content assistance</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/claude" alt="Claude logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">AI</span></span><b>Claude</b><small>Draft refinement &amp; content assistance</small></div>
+        <div class="tool-item"><span class="tool-logo"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="tool-fallback">AI</span></span><b>Gemini</b><small>Research &amp; idea assistance</small></div>
       </div>
       <div class="tool-note">Tools don't create the idea. They help me bring it to life. ♡</div>
     </div>
@@ -1246,7 +1246,7 @@ footer{background:transparent !important;}
         <span class="contact-action-main"><b>WhatsApp</b><small>Quick chat? ♡</small></span>
         <span class="contact-action-arrow">→</span>
       </a>
-      <a class="contact-action email" href="mailto:riyabarman1017@gmail.com?subject=Portfolio%20%2F%20Work%20Opportunity">
+      <a class="contact-action email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=riyabarman1017@gmail.com&amp;su=Portfolio%20%2F%20Work%20Opportunity" target="_blank" rel="noopener">
         <span class="contact-action-icon">✉</span>
         <span class="contact-action-main"><b>Email Me</b><small>For detailed conversations ♡</small></span>
         <span class="contact-action-arrow">→</span>
