@@ -484,6 +484,30 @@
   opacity:.85;
   z-index:3;
 }
+.video-mute-toggle{
+  position:absolute;
+  top:20px;
+  left:20px;
+  z-index:5;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:50%;
+  background:rgba(20,18,35,.58);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1rem;
+  line-height:1;
+  cursor:pointer;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  box-shadow:0 8px 18px rgba(20,18,35,.18);
+  transition:transform .18s ease,background .18s ease;
+}
+.video-mute-toggle:hover{transform:scale(1.06);background:rgba(20,18,35,.72);}
+.video-mute-toggle:focus-visible{outline:3px solid rgba(255,255,255,.9);outline-offset:2px;}
 .content-video{
   width:100%;
   height:100%;
@@ -1250,12 +1274,18 @@ footer{background:transparent !important;}
         <div class="content-video-note">this one is mine ♡</div>
         <div class="content-video-frame">
           <div class="content-video-tape"></div>
-          <video class="content-video" controls playsinline preload="metadata"
+          <video id="portfolioVideo" class="content-video" autoplay muted loop playsinline preload="auto"
                  aria-label="Riya Barman content creation video"
+                 disablePictureInPicture
+                 controlsList="nodownload noplaybackrate noremoteplayback"
+                 disableRemotePlayback
                  onloadeddata="this.parentElement.classList.add('video-ready')">
             <source src="videosRia_portfolio_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+          <button class="video-mute-toggle" id="videoMuteToggle" type="button" aria-label="Unmute video" aria-pressed="true">
+            🔇
+          </button>
           <div class="content-video-placeholder">
             <div class="placeholder-play">▶</div>
             <b>Your content creation video goes here ♡</b>
@@ -1797,6 +1827,56 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+
+<script>
+/* Content-creation video: autoplay, loop, no pause controls; mute toggle only. */
+(function(){
+  const video = document.getElementById('portfolioVideo');
+  const muteBtn = document.getElementById('videoMuteToggle');
+  if(!video || !muteBtn) return;
+
+  const syncMuteButton = () => {
+    const muted = video.muted;
+    muteBtn.textContent = muted ? '🔇' : '🔊';
+    muteBtn.setAttribute('aria-label', muted ? 'Unmute video' : 'Mute video');
+    muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
+    muteBtn.title = muted ? 'Unmute' : 'Mute';
+  };
+
+  const startVideo = () => {
+    video.muted = true;
+    syncMuteButton();
+    const promise = video.play();
+    if(promise && typeof promise.catch === 'function') promise.catch(()=>{});
+  };
+
+  muteBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    video.muted = !video.muted;
+    syncMuteButton();
+    const promise = video.play();
+    if(promise && typeof promise.catch === 'function') promise.catch(()=>{});
+  });
+
+  video.addEventListener('pause', function(){
+    if(!video.ended){
+      const promise = video.play();
+      if(promise && typeof promise.catch === 'function') promise.catch(()=>{});
+    }
+  });
+
+  video.addEventListener('loadedmetadata', startVideo);
+  video.addEventListener('canplay', function(){
+    if(video.paused){
+      const promise = video.play();
+      if(promise && typeof promise.catch === 'function') promise.catch(()=>{});
+    }
+  });
+
+  startVideo();
+})();
+</script>
 
 </body>
 </html>
