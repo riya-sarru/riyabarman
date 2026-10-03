@@ -311,7 +311,249 @@
 
 
   /* Section-by-section pastel palette — cute, soft and recruiter-friendly */
-  #about.cute-section{
+  
+/* Content creation showcase */
+.content-creation-section{
+  position:relative;
+  padding:82px 0 92px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255,205,224,.34), transparent 22%),
+    radial-gradient(circle at 88% 82%, rgba(193,226,255,.30), transparent 24%),
+    linear-gradient(135deg,#FFF9FC 0%,#F7F5FF 52%,#F5FBFF 100%);
+}
+.content-creation-section:before{
+  content:"";
+  position:absolute;
+  width:180px;height:180px;
+  left:-55px;top:70px;
+  border-radius:50%;
+  border:2px dashed rgba(108,99,255,.16);
+  transform:rotate(-12deg);
+}
+.content-creation-kicker{
+  display:inline-block;
+  margin:0 0 12px 4px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.76);
+  border:1px solid #E5DDF3;
+  color:#6C63A5;
+  font-family:Caveat,cursive;
+  font-size:1.2rem;
+  transform:rotate(-2deg);
+}
+.content-creation-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(300px,.72fr);
+  gap:58px;
+  align-items:center;
+}
+.content-creation-copy{position:relative;z-index:1;}
+.content-creation-copy .sec-title{margin-bottom:20px;}
+.content-creation-lead{
+  color:#2F3650;
+  font-size:1.15rem;
+  line-height:1.75;
+  max-width:650px;
+  margin-bottom:12px;
+  font-weight:600;
+}
+.content-creation-text{
+  color:var(--muted);
+  max-width:650px;
+  font-size:1rem;
+  line-height:1.85;
+}
+.content-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin:24px 0;
+}
+.content-flow span{
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.76);
+  border:1px solid #E7DEEF;
+  font-size:.78rem;
+  font-weight:700;
+  color:#4D4C6B;
+}
+.content-flow i{
+  font-style:normal;
+  color:#9A8FD0;
+  font-weight:800;
+}
+.content-confidence-note{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  max-width:620px;
+  padding:17px 18px;
+  border-radius:20px;
+  background:#FFF3F8;
+  border:1px solid #F0D4E0;
+  box-shadow:0 10px 24px rgba(63,42,78,.05);
+  transform:rotate(-.6deg);
+}
+.content-note-pin{
+  width:38px;height:38px;
+  flex:0 0 38px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:12px;
+  background:#fff;
+  color:#C56C8D;
+  font-size:1.2rem;
+}
+.content-confidence-note b{
+  display:block;
+  color:#6A3650;
+  font-family:Caveat,cursive;
+  font-size:1.45rem;
+  margin-bottom:2px;
+}
+.content-confidence-note small{
+  display:block;
+  color:#745C68;
+  font-size:.82rem;
+  line-height:1.55;
+}
+.content-mini-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
+}
+.content-mini-tags span{
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.68);
+  border:1px solid rgba(108,99,255,.10);
+  color:#62617A;
+  font-size:.74rem;
+  font-weight:700;
+}
+.content-video-side{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.content-video-note{
+  align-self:flex-start;
+  margin:0 0 -6px -10px;
+  padding:7px 12px;
+  background:#FFE9F2;
+  color:#8C5370;
+  border:1px solid #F2D1DE;
+  border-radius:12px;
+  font-family:Caveat,cursive;
+  font-size:1.25rem;
+  transform:rotate(-5deg);
+  z-index:2;
+}
+.content-video-frame{
+  position:relative;
+  width:min(350px,100%);
+  aspect-ratio:9/16;
+  padding:12px;
+  border-radius:26px;
+  background:#FFF;
+  border:1px solid #E1D9EA;
+  box-shadow:0 24px 55px rgba(48,40,74,.14);
+  transform:rotate(2deg);
+  overflow:hidden;
+}
+.content-video-frame:after{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px dashed rgba(108,99,255,.18);
+  border-radius:20px;
+  pointer-events:none;
+}
+.content-video-tape{
+  position:absolute;
+  top:-9px;left:50%;
+  width:92px;height:25px;
+  transform:translateX(-50%) rotate(-3deg);
+  background:#DCCEFF;
+  opacity:.85;
+  z-index:3;
+}
+.content-video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:18px;
+  background:
+    linear-gradient(160deg,#F0EAFE 0%,#E8F4FF 100%);
+}
+.content-video-placeholder{
+  position:absolute;
+  inset:12px;
+  z-index:2;
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:28px;
+  background:
+    radial-gradient(circle at 30% 20%,rgba(255,255,255,.9),transparent 28%),
+    linear-gradient(160deg,#F0EAFE 0%,#EAF7FF 100%);
+  color:#5D5779;
+}
+.content-video-frame.video-ready .content-video-placeholder{display:none;}
+.placeholder-play{
+  width:62px;height:62px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:#fff;
+  color:#6C63FF;
+  box-shadow:0 12px 25px rgba(108,99,255,.15);
+  margin-bottom:16px;
+  font-size:1.25rem;
+}
+.content-video-placeholder b{
+  color:#4E4869;
+  font-size:.92rem;
+  margin-bottom:6px;
+}
+.content-video-placeholder small{
+  color:#77718E;
+  font-size:.72rem;
+  line-height:1.5;
+}
+.content-video-placeholder code{
+  font-size:.7rem;
+  color:#655E88;
+}
+.content-video-caption{
+  margin-top:18px;
+  color:#6E668A;
+  font-family:Caveat,cursive;
+  font-size:1.35rem;
+  transform:rotate(-1deg);
+}
+@media(max-width:900px){
+  .content-creation-grid{grid-template-columns:1fr;gap:42px;}
+  .content-video-side{max-width:380px;margin:0 auto;}
+}
+@media(max-width:560px){
+  .content-creation-section{padding:65px 0 72px;}
+  .content-flow i{display:none;}
+  .content-flow{gap:7px;}
+  .content-video-frame{width:min(310px,90vw);}
+  .content-creation-copy .sec-title{font-size:2.55rem !important;}
+}
+
+#about.cute-section{
     background:
       radial-gradient(circle at 8% 18%, rgba(255,196,214,.34), transparent 22%),
       radial-gradient(circle at 92% 82%, rgba(212,201,255,.28), transparent 24%),
@@ -965,6 +1207,63 @@ footer{background:transparent !important;}
     <div class="random-fact-wrap">
       <button class="fact-button" type="button" onclick="showRandomRiyaFact()">🎲 Or... try a random Riya fact →</button>
       <div id="randomRiyaFact" class="random-fact">Spoiler alert: I have a lot of them! ♡</div>
+    </div>
+  </div>
+</section>
+
+<section id="content-creation" class="content-creation-section">
+  <div class="wrap">
+    <div class="content-creation-kicker">✦ A little look into my content creation</div>
+    <div class="content-creation-grid">
+      <div class="content-creation-copy">
+        <div class="eyebrow">Content Creation ♡</div>
+        <h2 class="sec-title">Ideas are nice.<br><span class="accent">Creating them is better.</span></h2>
+        <p class="content-creation-lead">
+          From a simple idea to a piece of content people can actually see, I enjoy being part of the whole process.
+        </p>
+        <p class="content-creation-text">
+          I’m still learning, experimenting and finding my own style — but that’s exactly what makes content creation exciting for me.
+          I like understanding the idea first, then working on the hook, visuals, shooting, editing, caption and finally seeing how people respond.
+        </p>
+
+        <div class="content-flow">
+          <span>Idea</span><i>→</i><span>Hook</span><i>→</i><span>Shoot</span><i>→</i><span>Edit</span><i>→</i><span>Publish</span><i>→</i><span>Learn</span>
+        </div>
+
+        <div class="content-confidence-note">
+          <span class="content-note-pin">♡</span>
+          <div>
+            <b>Learning by doing.</b>
+            <small>Every video teaches me something new — and I’m building my style one piece at a time.</small>
+          </div>
+        </div>
+
+        <div class="content-mini-tags">
+          <span>🎬 Short-form</span>
+          <span>✍️ Storytelling</span>
+          <span>🎨 Visuals</span>
+          <span>📈 Analyse & improve</span>
+        </div>
+      </div>
+
+      <div class="content-video-side">
+        <div class="content-video-note">this one is mine ♡</div>
+        <div class="content-video-frame">
+          <div class="content-video-tape"></div>
+          <video class="content-video" controls playsinline preload="metadata"
+                 aria-label="Riya Barman content creation video"
+                 onloadeddata="this.parentElement.classList.add('video-ready')">
+            <source src="videos/Ria_portfolio_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content-video-placeholder">
+            <div class="placeholder-play">▶</div>
+            <b>Your content creation video goes here ♡</b>
+            <small>9:16 vertical video · <code>videos/Ria_portfolio_video.mp4</code></small>
+          </div>
+        </div>
+        <div class="content-video-caption">Create · experiment · learn · repeat ✦</div>
+      </div>
     </div>
   </div>
 </section>
