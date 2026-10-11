@@ -1470,6 +1470,67 @@ section .random-fact-wrap{margin-top:16px !important;}
   #about .random-fact{width:100%;min-width:0;}
 }
 
+
+/* Final How I Work layout: short, aligned, easy-to-scan steps */
+#process .process-track{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:10px !important;
+  overflow:visible !important;
+  padding:0 !important;
+  margin:0 !important;
+  align-items:stretch !important;
+}
+#process .process-phase{display:contents !important;min-width:0 !important;}
+#process .process-phase .phase-label{display:none !important;}
+#process .process-step{
+  width:100% !important;
+  min-width:0 !important;
+  min-height:72px !important;
+  height:100% !important;
+  margin:0 !important;
+  padding:10px 11px !important;
+  grid-template-columns:28px minmax(0,1fr) 10px !important;
+  align-items:center !important;
+  gap:4px 8px !important;
+  border-radius:13px !important;
+  box-shadow:0 3px 10px rgba(20,36,84,.045) !important;
+  transform:none !important;
+}
+#process .process-step span{
+  grid-row:1/3 !important;
+  width:27px !important;height:27px !important;
+  font-size:.82rem !important;
+  align-self:center !important;
+}
+#process .process-step b{
+  font-family:'Poppins',sans-serif !important;
+  font-size:.78rem !important;
+  font-weight:700 !important;
+  line-height:1.25 !important;
+  overflow-wrap:anywhere !important;
+}
+#process .process-step small{
+  font-size:.65rem !important;
+  line-height:1.3 !important;
+  display:block !important;
+}
+#process .process-step:after{font-size:.75rem !important;align-self:center !important;}
+#process .process-step:hover{transform:translateY(-2px) !important;}
+#process .process-step.selected{outline:2px solid rgba(105,88,245,.35) !important;box-shadow:0 5px 12px rgba(105,88,245,.10) !important;}
+#process .process-detail{margin-top:12px !important;padding:11px 14px !important;font-size:.8rem !important;line-height:1.5 !important;border-radius:14px !important;}
+@media(max-width:980px){
+  #process .process-track{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:560px){
+  #process .process-track{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:8px !important;}
+  #process .process-step{min-height:78px !important;padding:9px !important;grid-template-columns:24px minmax(0,1fr) !important;gap:4px 6px !important;}
+  #process .process-step span{width:23px !important;height:23px !important;font-size:.72rem !important;}
+  #process .process-step b{font-size:.72rem !important;}
+  #process .process-step small{font-size:.61rem !important;}
+  #process .process-step:after{display:none !important;}
+}
+
 </style>
 </head>
 <body>
