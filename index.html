@@ -1227,6 +1227,15 @@ section .random-fact-wrap{margin-top:16px !important;}
   #about .riya-side-card{min-height:0 !important;}
 }
 
+
+/* About section is text-and-cards only; use the single profile image in Home. */
+#about .about-head{grid-template-columns:minmax(0,1fr) !important;max-width:900px;margin-left:auto;margin-right:auto;}
+#about .about-title-copy{max-width:900px;}
+#about .about-photo-wrap,
+#about .about-photo-frame,
+#about .photo-note{display:none !important;}
+@media(max-width:900px){#about .about-head{grid-template-columns:minmax(0,1fr) !important;}}
+
 </style>
 </head>
 <body>
@@ -1304,10 +1313,6 @@ section .random-fact-wrap{margin-top:16px !important;}
         <h2 class="sec-title">Not just a portfolio,<br>but <span class="accent">a little bit of me</span> ♡</h2>
         <span class="headline-note">Same girl… just with bigger dreams. ♡</span>
         <p>I’m a social-first creative who enjoys turning ideas into content people want to stop and engage with. I love exploring trends, shaping a story, planning the details and learning from every post. Pick a card to meet the creative, work and everyday sides of me. ♡</p>
-      </div>
-      <div class="about-photo-wrap">
-        <div class="about-photo-frame"><img src="second.png" alt="Riya Barman"></div>
-        <div class="photo-note">Create · Plan · Edit · Repeat ♡<small>That’s how I work.</small></div>
       </div>
     </div>
 
