@@ -1236,6 +1236,57 @@ section .random-fact-wrap{margin-top:16px !important;}
 #about .photo-note{display:none !important;}
 @media(max-width:900px){#about .about-head{grid-template-columns:minmax(0,1fr) !important;}}
 
+
+/* Get to Know Riya — refined layout, softer scrapbook feel, and responsive cards */
+#about.cute-section{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 8% 12%,rgba(255,218,235,.42),transparent 32%),
+    radial-gradient(ellipse at 92% 28%,rgba(214,224,255,.48),transparent 34%),
+    linear-gradient(180deg,#FFF9FC 0%,#F8F7FF 54%,#FFFCF7 100%);
+  border-top:1px solid rgba(224,215,245,.6);
+  border-bottom:1px solid rgba(224,215,245,.6);
+}
+#about .wrap{position:relative;z-index:1;}
+#about .about-head{display:block !important;max-width:850px;margin:0 auto 30px;text-align:center;}
+#about .about-title-copy .eyebrow{margin-bottom:12px;}
+#about .about-title-copy .sec-title{margin-bottom:16px;}
+#about .headline-note{display:inline-block;color:#7866C9;font:600 1.12rem "Caveat",cursive;transform:rotate(-1.5deg);margin:0 0 16px;}
+#about .about-title-copy p{max-width:730px;margin:0 auto;color:#687086;font-size:1rem;line-height:1.85;}
+#about .about-playground{display:grid !important;grid-template-columns:minmax(0,1fr) !important;max-width:1080px;margin:0 auto;gap:0;}
+#about .side-box{margin:0 !important;padding:clamp(20px,3.5vw,36px) !important;border-radius:30px !important;background:rgba(255,255,255,.78) !important;border:1px solid rgba(214,205,242,.8) !important;box-shadow:0 20px 55px rgba(94,78,151,.09) !important;backdrop-filter:blur(8px);}
+#about .side-box h3{font-size:clamp(1.8rem,3vw,2.45rem);line-height:1.15;margin:10px 0 8px;}
+#about .side-hint{max-width:680px;font-size:.9rem;line-height:1.7;margin:0 0 22px;}
+#about .riya-side-grid{display:grid !important;grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:14px !important;}
+#about .riya-side-card{min-width:0;min-height:185px !important;display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:20px !important;border-radius:22px !important;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease !important;}
+#about .riya-side-card:hover,#about .riya-side-card:focus-visible{transform:translateY(-5px) rotate(-.5deg) !important;box-shadow:0 14px 26px rgba(80,65,130,.12) !important;outline:none;}
+#about .riya-side-card.selected{transform:translateY(-3px) !important;box-shadow:0 0 0 3px rgba(126,105,220,.14),0 12px 24px rgba(80,65,130,.1) !important;}
+#about .side-emoji{flex-shrink:0;margin-bottom:8px;}
+#about .riya-side-card strong{margin-top:0 !important;line-height:1.35;}
+#about .riya-side-card small{line-height:1.55;}
+#about .riya-side-card small:last-child{margin-top:auto !important;padding-top:12px;}
+#about .side-reveal{margin-top:18px;min-height:64px;display:flex;align-items:center;line-height:1.7;padding:16px 18px !important;border-radius:18px !important;}
+#about .random-fact-wrap{max-width:1080px;margin:22px auto 0;justify-content:stretch !important;gap:14px;}
+#about .fact-button{flex-shrink:0;box-shadow:4px 5px 0 #D8CFFB;transition:transform .2s ease,box-shadow .2s ease;}
+#about .fact-button:hover{transform:translateY(-2px);box-shadow:4px 7px 0 #D8CFFB;}
+#about .random-fact{border:1px dashed #D8CFFB;min-height:50px;display:flex;align-items:center;line-height:1.65;background:rgba(255,255,255,.72);}
+@media(max-width:900px){
+  #about .riya-side-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  #about .riya-side-card{min-height:165px !important;}
+}
+@media(max-width:560px){
+  #about.cute-section{padding:62px 0;}
+  #about .about-title-copy .sec-title br{display:none;}
+  #about .about-title-copy p{font-size:.93rem;}
+  #about .side-box{padding:20px !important;border-radius:24px !important;}
+  #about .riya-side-grid{grid-template-columns:1fr !important;gap:11px !important;}
+  #about .riya-side-card{min-height:0 !important;padding:17px !important;}
+  #about .riya-side-card small:last-child{padding-top:8px;}
+  #about .random-fact-wrap{flex-direction:column;align-items:stretch !important;}
+  #about .fact-button{align-self:flex-start;max-width:100%;white-space:normal;text-align:left;}
+  #about .random-fact{min-width:0;width:100%;}
+}
+
 </style>
 </head>
 <body>
