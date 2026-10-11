@@ -282,12 +282,22 @@
   .flip-back{transform:rotateY(180deg);background:var(--ink);color:#fff;align-items:flex-start;text-align:left;justify-content:flex-start;}
   .back-label{color:#C9C3FF;font-weight:800;font-size:.76rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;}
   .flip-back ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;width:100%}.flip-back li{font-size:.78rem;padding-left:15px;position:relative;color:#F2F2F7}.flip-back li:before{content:'✦';position:absolute;left:0;color:#C9C3FF;}
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .case-card{padding:28px;position:relative;overflow:hidden;}
-  .case-number{position:absolute;right:20px;top:10px;font-size:3.2rem;font-weight:900;color:#EEEAFD;line-height:1;}
-  .case-card h3{font-size:1.2rem;margin:10px 0 20px;max-width:85%;}
+  .case-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  .case-card{position:relative;overflow:hidden;}
+  .case-dropdown{padding:0;}
+  .case-dropdown summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;cursor:pointer;font-weight:700;font-size:1.08rem;line-height:1.45;transition:background .2s ease;}
+  .case-dropdown summary::-webkit-details-marker{display:none;}
+  .case-dropdown summary:hover{background:var(--indigo-pale);}
+  .case-title{display:block;padding-right:8px;}
+  .case-chevron{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--indigo-pale);color:var(--indigo-deep);font-size:1.3rem;transition:transform .2s ease;}
+  .case-dropdown[open] summary{border-bottom:1px solid var(--border);background:#FAF9FF;}
+  .case-dropdown[open] .case-chevron{transform:rotate(180deg);}
+  .case-content{position:relative;padding:24px 26px 28px;}
+  .case-number{position:absolute;right:20px;top:12px;font-size:3.2rem;font-weight:900;color:#EEEAFD;line-height:1;}
+  .case-content .proj-tag{position:relative;z-index:1;margin-bottom:4px;}
   .case-section{margin-top:14px}.case-section b{font-size:.75rem;color:var(--indigo);text-transform:uppercase;letter-spacing:.05em}.case-section p{color:var(--muted);font-size:.84rem;margin-top:3px;}
   .case-section.learning{margin-top:20px;padding:15px;border-radius:16px;background:var(--indigo-pale);}
+  @media(max-width:600px){.case-dropdown summary{padding:18px;font-size:.98rem}.case-content{padding:20px 18px 24px;}}
   .process-story{display:flex;gap:18px;overflow-x:auto;padding:18px 4px 28px;margin-bottom:10px;scrollbar-width:thin;}
   .process-story span{min-width:245px;background:#fff;border:1px dashed #D9D8EA;border-radius:18px;padding:17px;font-size:.86rem;color:var(--muted);box-shadow:0 7px 18px rgba(23,23,35,.04);}
   .process-track{display:flex;gap:12px;align-items:stretch;overflow-x:auto;padding:10px 2px 18px;}
@@ -1380,10 +1390,11 @@ footer{background:transparent !important;}
     <p class="section-note">A closer look at how I think, create and solve content challenges.</p>
 
     <div class="case-grid">
-      <article class="case-card">
+      <details class="case-card case-dropdown">
+        <summary><span class="case-title">Making Healthcare Content More Relatable</span><span class="case-chevron" aria-hidden="true">⌄</span></summary>
+        <div class="case-content">
         <div class="case-number">01</div>
         <span class="proj-tag">Healthy Jeena Sikho</span>
-        <h3>Making Healthcare Content More Relatable</h3>
         <div class="case-section"><b>Objective</b><p>Improve low social media views and reach.</p></div>
         <div class="case-section"><b>Research &amp; Observation</b><p>Healthcare content was often educational, heavy and overly serious. I analyzed other companies, the audience and how content was being received.</p></div>
         <div class="case-section"><b>Gap Identified</b><p>The educational value was useful, but the presentation needed a more relatable and engaging element.</p></div>
@@ -1391,12 +1402,14 @@ footer{background:transparent !important;}
         <div class="case-section"><b>Execution</b><p>Planned content around audience needs, hooks, captions, descriptions and more engaging video messaging.</p></div>
         <div class="case-section"><b>Performance</b><p>People started watching more, and reach, views, likes and followers began improving.</p></div>
         <div class="case-section learning"><b>Learning</b><p>Healthcare content doesn't always have to feel heavy. Useful information can be presented in a relatable and engaging way.</p></div>
-      </article>
+      </div>
+      </details>
 
-      <article class="case-card">
+      <details class="case-card case-dropdown">
+        <summary><span class="case-title">Turning Employee Engagement into Social Media Content</span><span class="case-chevron" aria-hidden="true">⌄</span></summary>
+        <div class="case-content">
         <div class="case-number">02</div>
         <span class="proj-tag">Employee Engagement</span>
-        <h3>Turning Employee Engagement into Social Media Content</h3>
         <div class="case-section"><b>Objective</b><p>Increase employee engagement while creating relatable social media content.</p></div>
         <div class="case-section"><b>Challenge</b><p>Long working hours and work pressure meant employees had limited interaction and there was little employee-led fun content.</p></div>
         <div class="case-section"><b>Strategy</b><p>Use content creation itself as a way to give employees a break, help them interact and involve them in the creative process.</p></div>
@@ -1404,19 +1417,22 @@ footer{background:transparent !important;}
         <div class="case-section"><b>Performance</b><p>One employee-led reel achieved 20,000+ reach, and overall content reach started coming in above 20,000.</p></div>
         <div class="case-section"><b>Impact</b><p>Employees enjoyed participating, while communication, acting and content-making skills also improved.</p></div>
         <div class="case-section learning"><b>Learning</b><p>Good content doesn't always start with a trend. Sometimes it starts with people.</p></div>
-      </article>
+      </div>
+      </details>
 
-      <article class="case-card">
+      <details class="case-card case-dropdown">
+        <summary><span class="case-title">Turning Two Products into One Giftable Concept</span><span class="case-chevron" aria-hidden="true">⌄</span></summary>
+        <div class="case-content">
         <div class="case-number">03</div>
         <span class="proj-tag">Exclusive Gifts × MV Cosmetics</span>
-        <h3>Turning Two Products into One Giftable Concept</h3>
         <div class="case-section"><b>Objective</b><p>Combine gifting and makeup into a creative concept that positioned makeup as a gift.</p></div>
         <div class="case-section"><b>Strategy</b><p>Instead of simply promoting a product, build a story around the idea: if makeup is to be gifted, how can it be presented as a thoughtful gift?</p></div>
         <div class="case-section"><b>Execution</b><p>Developed the collaboration concept “MV Gifts”, created the story and script, planned product presentation and acted in the shoot.</p></div>
         <div class="case-section"><b>Result</b><p>The concept helped audiences see makeup as a gifting option through Exclusive Gifts, and affiliate-based sales followed.</p></div>
         <div class="case-section"><b>Contribution</b><p>Creative ideation, storytelling, script development, collaboration concept, content planning and shoot execution.</p></div>
         <div class="case-section learning"><b>Learning</b><p>Sometimes creativity is not about creating a completely new product — it's about presenting an existing product in a completely new way.</p></div>
-      </article>
+      </div>
+      </details>
     </div>
   </div>
 </section>
