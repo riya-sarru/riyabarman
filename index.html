@@ -1169,6 +1169,64 @@ section .random-fact-wrap{margin-top:16px !important;}
   section .section-note{margin-top:-4px !important;margin-bottom:14px !important;}
 }
 
+
+/* Home + About refresh: social-first positioning, tidy hierarchy, and soft scrapbook details. */
+.hero{padding:72px 0 46px;}
+.hero-grid{gap:34px;}
+.pill-tag{background:linear-gradient(100deg,#FFF0F6,#F2EEFF) !important;border-color:#E8DDF7 !important;color:#665B82 !important;}
+.hero-desc{line-height:1.85;max-width:590px;}
+.role-pill{border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease;}
+.role-pill:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(70,55,120,.08);}
+.role-pill.b{background:#E5F2FF !important;color:#3F6D9D !important;border-color:#D0E5F8 !important;}
+.role-pill.a{background:#F2ECFF !important;color:#6A55A6 !important;border-color:#E2D7F8 !important;}
+.stats-row{gap:30px;}
+.stat{min-width:105px;padding:10px 14px;border:1px solid #E8E0F4;border-radius:16px;background:rgba(255,255,255,.64);}
+.stat b{font-family:"Caveat",cursive;color:#6958F5;font-size:2rem;line-height:1.1;}
+.stat span{display:block;margin-top:5px;font-size:.76rem;line-height:1.4;}
+.hero-visual .orb{border:8px solid rgba(255,255,255,.78);box-shadow:0 22px 48px rgba(108,99,255,.18),8px 8px 0 #E6DDFB;}
+.float-badge.job{background:#FFF0F6;border:1px solid #F2D5E2;color:#7A4560;}
+.float-badge.avail{border:1px solid #DADFF6;}
+#about .about-head{gap:34px;margin-bottom:22px;}
+#about .about-title-copy p{font-size:.98rem;line-height:1.85;max-width:640px;}
+#about .headline-note{box-shadow:3px 4px 0 rgba(222,204,245,.75);}
+#about .about-photo-frame{border-radius:4px;box-shadow:0 16px 30px rgba(20,36,84,.09),7px 7px 0 #E9E0FC;}
+#about .about-photo-frame img{border-radius:2px;}
+#about .side-box{padding:26px !important;}
+#about .side-box h3{font-size:clamp(1.8rem,3vw,2.25rem);line-height:1.08;margin:7px 0;}
+#about .riya-side-card{min-height:175px !important;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left;}
+#about .riya-side-card:hover{box-shadow:0 12px 24px rgba(105,88,245,.10);}
+#about .riya-side-card strong{font-family:"Poppins",sans-serif;}
+#about .side-reveal{line-height:1.7;min-height:58px;margin-top:16px;border-radius:16px;}
+#about .random-fact-wrap{gap:12px;}
+#about .fact-button{background:#FFF0F6 !important;border-color:#F2D6E2 !important;color:#925575 !important;}
+#about .random-fact{line-height:1.6;}
+@media(max-width:900px){
+  .hero{padding:52px 0 32px;}
+  .hero-visual{margin-top:0;}
+  #about .about-head{grid-template-columns:1fr .7fr;gap:22px;}
+}
+@media(max-width:760px){
+  .hero{padding:38px 0 26px;}
+  .hero-grid{gap:18px;}
+  .pill-tag{font-size:.76rem;padding:8px 12px;}
+  .hero-cta{margin-bottom:24px;}
+  .stats-row{gap:9px;}
+  .stat{flex:1;min-width:88px;padding:10px;}
+  .stat b{font-size:1.7rem;}
+  #about .about-head{grid-template-columns:1fr;gap:20px;}
+  #about .about-photo-wrap{max-width:250px;margin:0 auto;}
+  #about .about-photo-frame{width:230px;}
+  #about .riya-side-grid{grid-template-columns:1fr 1fr !important;gap:10px !important;}
+  #about .riya-side-card{min-height:160px !important;padding:15px !important;}
+  #about .random-fact-wrap{align-items:stretch;}
+  #about .fact-button{width:100%;}
+  #about .random-fact{min-width:0;width:100%;}
+}
+@media(max-width:420px){
+  #about .riya-side-grid{grid-template-columns:1fr !important;}
+  #about .riya-side-card{min-height:0 !important;}
+}
+
 </style>
 </head>
 <body>
@@ -1206,18 +1264,18 @@ section .random-fact-wrap{margin-top:16px !important;}
       <div class="greet">Hi, I'm</div>
       <h1 class="name">Riya <span class="accent">Barman</span></h1>
       <div class="role-pills">
-        <span class="role-pill a">Digital Marketing Executive</span>
         <span class="role-pill b">Social Media Executive</span>
         <span class="role-pill a">Content Creator</span>
+        <span class="role-pill a">Digital Marketing Executive</span>
       </div>
-      <p class="hero-desc">I help businesses grow through <b>Digital Marketing</b>, <b>Social Media Management</b>, <b>Local SEO</b>, <b>Website Management</b>, and <b>Data-Driven Marketing Strategies</b>.</p>
+      <p class="hero-desc">I create thoughtful social content that helps brands connect with people — from <b>content planning and reels</b> to <b>social media management, community engagement</b> and performance insights.</p>
       <div class="hero-cta">
         <a href="resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
         <a href="#contact" class="btn btn-dark">Hire Me →</a>
       </div>
       <div class="stats-row">
-        <div class="stat"><b>1Y</b><span>Digital Marketing Experience</span></div>
-        <div class="stat"><b>MBA</b><span>MBA</span></div>
+        <div class="stat"><b>1.5Y</b><span>Digital Marketing Experience</span></div>
+        <div class="stat"><b>MBA</b><span>Currently Pursuing</span></div>
         <div class="stat"><b>15+</b><span>Marketing Tools</span></div>
       </div>
     </div>
@@ -1245,7 +1303,7 @@ section .random-fact-wrap{margin-top:16px !important;}
         <div class="eyebrow">✦ Get to Know Me</div>
         <h2 class="sec-title">Not just a portfolio,<br>but <span class="accent">a little bit of me</span> ♡</h2>
         <span class="headline-note">Same girl… just with bigger dreams. ♡</span>
-        <p>This isn't your typical “About Me” section. Explore a few cards and get to know the real me — my interests, work vibe, and what keeps me going!</p>
+        <p>I’m a social-first creative who enjoys turning ideas into content people want to stop and engage with. I love exploring trends, shaping a story, planning the details and learning from every post. Pick a card to meet the creative, work and everyday sides of me. ♡</p>
       </div>
       <div class="about-photo-wrap">
         <div class="about-photo-frame"><img src="second.png" alt="Riya Barman"></div>
@@ -1257,12 +1315,12 @@ section .random-fact-wrap{margin-top:16px !important;}
       <div class="side-box">
         <div class="mini-label">♡ Pick a Card</div>
         <h3>Which Side of Riya Do You Want to Meet?</h3>
-        <p class="side-hint">Choose a card and discover a little more about me! ♡</p>
+        <p class="side-hint">A little work, a little creativity, and a little real-life Riya. Tap any card to explore. ♡</p>
         <div class="riya-side-grid">
-          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'creative')"><span class="side-emoji">🎨</span><strong>Creative Me</strong><small>Ideas, aesthetics, and anything that looks good on a screen (or in real life!).</small><small style="margin-top:12px;color:#5D50BC;font-weight:700;">Click to reveal →</small></button>
-          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'social')"><span class="side-emoji">📱</span><strong>Social Media Me</strong><small>Trends, reels, engagement, and a never-ending scroll (for work, obviously!).</small><small style="margin-top:12px;color:#4D74B7;font-weight:700;">Click to reveal →</small></button>
-          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'chill')"><span class="side-emoji">☕</span><strong>Chill Me</strong><small>Good food, random thoughts, music, and happy little moments.</small><small style="margin-top:12px;color:#A56A00;font-weight:700;">Click to reveal →</small></button>
-          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'work')"><span class="side-emoji">💻</span><strong>Work Mode</strong><small>Plans, deadlines, analytics and turning ideas into results.</small><small style="margin-top:12px;color:#318466;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'creative')"><span class="side-emoji">🎨</span><strong>The Creative Side</strong><small>Visual ideas, storytelling, hooks and details that make content feel memorable.</small><small style="margin-top:12px;color:#5D50BC;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'social')"><span class="side-emoji">📱</span><strong>The Social Side</strong><small>Reels, trends, captions, content calendars and audience engagement.</small><small style="margin-top:12px;color:#4D74B7;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'chill')"><span class="side-emoji">☕</span><strong>The Everyday Side</strong><small>Music, little moments, random thoughts and keeping life fun beyond work.</small><small style="margin-top:12px;color:#A56A00;font-weight:700;">Click to reveal →</small></button>
+          <button class="riya-side-card" type="button" onclick="showRiyaSide(this,'work')"><span class="side-emoji">💻</span><strong>The Work Mode</strong><small>Research first, plan with purpose, then review insights and improve.</small><small style="margin-top:12px;color:#318466;font-weight:700;">Click to reveal →</small></button>
         </div>
         <div id="riyaSideReveal" class="side-reveal">Choose a card and I'll reveal a little more. ♡</div>
       </div>
