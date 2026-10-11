@@ -1288,6 +1288,26 @@ section .random-fact-wrap{margin-top:16px !important;}
 }
 
 
+/* Let the About heading and intro use the available width */
+#about .about-title-copy .about-one-line-title{
+  white-space:nowrap !important;
+  font-size:clamp(1.5rem,2.8vw,2.55rem) !important;
+  letter-spacing:-.035em;
+  margin-bottom:18px !important;
+}
+#about .about-title-copy p{
+  max-width:none !important;
+  width:100% !important;
+  line-height:1.8 !important;
+  font-size:1rem !important;
+}
+@media(max-width:760px){
+  #about .about-title-copy .about-one-line-title{
+    white-space:normal !important;
+    font-size:clamp(1.7rem,6vw,2.35rem) !important;
+    letter-spacing:-.02em;
+  }
+}
 /* Restore the original single-column Get to Know Me heading */
 #about .about-head{display:block !important;grid-template-columns:none !important;gap:0 !important;}
 
@@ -1492,9 +1512,9 @@ section .random-fact-wrap{margin-top:16px !important;}
     <div class="about-head">
       <div class="about-title-copy">
         <div class="eyebrow">✦ Get to Know Me</div>
-        <h2 class="sec-title">Not just a portfolio,<br>but <span class="accent">a little bit of me</span> ♡</h2>
+        <h2 class="sec-title about-one-line-title">Not just a portfolio, but <span class="accent">a little bit of me</span> ♡</h2>
         <span class="headline-note">Same girl… just with bigger dreams. ♡</span>
-        <p>I’m a social-first creative who enjoys turning ideas into content people want to stop and engage with. I love exploring trends, shaping a story, planning the details and learning from every post. Pick a card to meet the creative, work and everyday sides of me. ♡</p>
+        <p>I’m a social-first creative who loves turning ideas into content people want to stop, connect with and remember. From exploring trends and understanding an audience to shaping stories, planning content and learning from insights, I enjoy every step of the creative process. This little corner shares how I think, what I love creating and the person behind the posts. Pick a card below to meet the creative, work and everyday sides of me. ♡</p>
       </div>
     </div>
 
