@@ -939,6 +939,36 @@ h2.sec-title .accent{color:var(--purple) !important;}
 .tool-item:nth-child(3n){background:#EAF8F1 !important;border-color:#BDE2D0 !important;}
 .tool-item>span{background:rgba(255,255,255,.7) !important;}
 
+/* How I Work: clearer labels, compact step cards, and working click interaction. */
+#process .process-track{gap:10px 14px !important;}
+#process .process-step{
+  min-height:96px !important;
+  padding:13px 15px !important;
+  grid-template-columns:38px minmax(0,1fr) 12px !important;
+  gap:5px 10px !important;
+  border-radius:16px !important;
+  box-shadow:0 5px 14px rgba(20,36,84,.04) !important;
+}
+#process .process-step span{
+  grid-row:1/3 !important;
+  width:34px !important;height:34px !important;
+  font-size:1rem !important;
+}
+#process .process-step b{
+  font-family:'Poppins',sans-serif !important;
+  font-size:.9rem !important;font-weight:700 !important;line-height:1.35 !important;
+}
+#process .process-step small{font-size:.73rem !important;line-height:1.45 !important;}
+#process .process-step:after{font:700 .9rem 'Poppins',sans-serif !important;align-self:center;}
+#process .process-step.selected{outline:2px solid rgba(105,88,245,.42) !important;box-shadow:0 7px 18px rgba(105,88,245,.12) !important;}
+#process .process-detail{padding:13px 16px !important;margin-top:12px !important;font-family:'Poppins',sans-serif !important;font-size:.86rem !important;line-height:1.6 !important;}
+@media(max-width:640px){
+  #process .process-step{min-height:0 !important;padding:12px !important;grid-template-columns:32px minmax(0,1fr) !important;gap:4px 9px !important;}
+  #process .process-step span{width:30px !important;height:30px !important;font-size:.9rem !important;}
+  #process .process-step b{font-size:.86rem !important;}
+  #process .process-step small{font-size:.72rem !important;}
+}
+
 /* Contact is intentionally kept structurally the same; only page palette flows through */
 #contact .contact-card{background:rgba(255,255,255,.84) !important;}
 
@@ -2135,6 +2165,30 @@ function openToolCategory(category, button){
     });
   });
 })();
+
+/* Make every How I Work step reveal a clear, useful explanation. */
+function toggleProcess(button){
+  const detail = document.getElementById('processDetail');
+  if(!detail || !button) return;
+  const title = (button.querySelector('b')?.textContent || '').trim();
+  const explanations = {
+    'Research': 'I first understand the brand, target audience, competitors, current trends and the goal of the content. This helps me create something relevant instead of posting just for the sake of posting.',
+    'Content Idea': 'I choose one clear idea or story that matches the audience’s interests and the brand’s message.',
+    'Creative Brief': 'I decide what the content should achieve, who it is for, which format fits best and what tone or visual style to follow.',
+    'Hook & Script': 'I write an attention-grabbing opening, organise the key points and shape them into a simple, engaging story.',
+    'Create / Shoot': 'I bring the plan to life by recording a reel or video, or creating the required post or carousel.',
+    'Edit': 'I trim clips, improve pacing, add text or subtitles, and polish the visuals so the content feels clear and platform-ready.',
+    'Caption': 'I write a caption that supports the content, includes relevant keywords when useful and gives people a clear next step or call to action.',
+    'Publish': 'I select the suitable platform and format, check the final post and publish or schedule it at an appropriate time.',
+    'Analyse': 'After publishing, I review views, reach, engagement, watch time and audience response to understand what worked.',
+    'Improve': 'I use the results and feedback to adjust the next idea, hook, format or posting approach.'
+  };
+  document.querySelectorAll('#process .process-step').forEach(step => {
+    step.classList.toggle('selected', step === button);
+    step.setAttribute('aria-pressed', step === button ? 'true' : 'false');
+  });
+  detail.textContent = explanations[title] || 'I use this step to make the content clearer, more relevant and more effective.';
+}
 
 /* Navbar dropdown */
 const navDropBtn = document.querySelector('.nav-dropbtn');
