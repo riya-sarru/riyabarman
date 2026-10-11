@@ -1287,6 +1287,105 @@ section .random-fact-wrap{margin-top:16px !important;}
   #about .random-fact{min-width:0;width:100%;}
 }
 
+
+/* Match Get to Know Me with the same section rhythm as the rest of the portfolio */
+#about.cute-section{
+  background:transparent !important;
+  border:0 !important;
+}
+#about .about-head{
+  display:block !important;
+  max-width:none !important;
+  margin:0 0 28px !important;
+  text-align:left !important;
+}
+#about .about-title-copy .eyebrow{margin-bottom:14px !important;}
+#about .about-title-copy .sec-title{margin-bottom:22px !important;}
+#about .headline-note{
+  display:inline-block;
+  margin:0 0 12px !important;
+  transform:none !important;
+  font-size:1rem !important;
+}
+#about .about-title-copy p{
+  max-width:760px !important;
+  margin:0 !important;
+  font-size:.98rem !important;
+  line-height:1.75 !important;
+}
+#about .about-playground{
+  display:block !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+#about .side-box{
+  margin:0 !important;
+  padding:clamp(22px,3vw,32px) !important;
+  border-radius:22px !important;
+  background:var(--card) !important;
+  border:1px solid var(--border) !important;
+  box-shadow:0 10px 28px rgba(23,23,35,.045) !important;
+  backdrop-filter:none !important;
+}
+#about .side-box h3{
+  font-family:'Playfair Display',serif !important;
+  font-size:clamp(1.45rem,2.8vw,1.9rem) !important;
+  line-height:1.25 !important;
+  color:var(--ink) !important;
+  margin:10px 0 8px !important;
+}
+#about .side-hint{max-width:720px !important;margin:0 0 22px !important;}
+#about .riya-side-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:14px !important;
+}
+#about .riya-side-card{
+  min-height:175px !important;
+  padding:20px !important;
+  border-radius:18px !important;
+  box-shadow:none !important;
+}
+#about .riya-side-card:hover,#about .riya-side-card:focus-visible{
+  transform:translateY(-3px) !important;
+  box-shadow:0 10px 22px rgba(23,23,35,.07) !important;
+}
+#about .riya-side-card.selected{
+  transform:translateY(-2px) !important;
+  box-shadow:0 0 0 2px rgba(108,99,255,.15) !important;
+}
+#about .side-reveal{
+  margin-top:16px !important;
+  min-height:54px !important;
+  border:1px solid var(--border) !important;
+  border-radius:14px !important;
+  background:var(--bg) !important;
+  color:var(--muted) !important;
+}
+#about .random-fact-wrap{
+  max-width:none !important;
+  margin:20px 0 0 !important;
+  justify-content:flex-start !important;
+}
+#about .fact-button{box-shadow:none !important;}
+#about .random-fact{
+  background:var(--card) !important;
+  border:1px solid var(--border) !important;
+  border-radius:14px !important;
+}
+@media(max-width:900px){
+  #about .riya-side-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+}
+@media(max-width:560px){
+  #about.cute-section{padding:60px 0 !important;}
+  #about .about-title-copy .sec-title br{display:none;}
+  #about .side-box{padding:20px !important;}
+  #about .riya-side-grid{grid-template-columns:1fr !important;}
+  #about .riya-side-card{min-height:0 !important;}
+  #about .random-fact-wrap{flex-direction:column;align-items:stretch !important;}
+  #about .fact-button{align-self:flex-start;max-width:100%;white-space:normal;text-align:left;}
+  #about .random-fact{width:100%;min-width:0;}
+}
+
 </style>
 </head>
 <body>
